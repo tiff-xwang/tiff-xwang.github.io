@@ -4,44 +4,167 @@
 <head>
   <title>Tiffany's Website</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <style>
+    .content figure {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    a {
+      color: #748C5B
+    }
+
+    body {
+      background-color: #FDFBF6;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 class="title is-1">Tiffany Xinran Wang</h1>
-  <p class="subtitle is-4">I'm a data journalism student at Columbia Journalism School.</p>
+  <div class="container">
+    <h1 class="title is-1">Tiffany Xinran Wang</h1>
+    <p class="subtitle is-4">I'm a data journalism student at Columbia Journalism School.</p>
 
-  <img src="portrait.jpg" width="300" height="400">
+    <img src="portrait.jpg" width="300" height="400">
 
-  <div class="columns">
+    <section class="section">
+      <div class="column is-full">
+        <h1 class="title is-2">Data</h1>
+      </div>
+      <div class="columns is-multiline is-mobile content">
+        <div class="column is-one-third">
+          img goes here
+        </div>
 
-    <div class="column is-one-third">
-      <h2>
-        <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
-      </h2>
-    </div>
+        <div class="column is-two-thirds">
+          <h3 class="title is-5">
+            <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
+          </h3>
 
-    <div class="column is-one-third">
-      <h2>
-        <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is Opening a New Store
-          on 125th Street</a>
-      </h2>
-    </div>
+          <div class="tags">
+            <span class="tag is-success is-light is-normal">Pandas</span>
+            <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+            <span class="tag is-success is-light is-normal">Three</span>
+          </div>
+          <div class="content">
+            <p>This is an asylum application tracker.</p>
+            <button class="button is-warning is-light is-small">
+              <a href="https://github.com/tiff-xwang/asylum_timeline.git">Read my code</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="column is-one-third">
-      <h2>
-        <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes Remain
-          Overcrowded in Harlem Schools</a>
-      </h2>
-    </div>
 
-    <div class="column is-one-third">
-      <h2>
-        <a
-          href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
-          of Dinner: A Food Bank Nourishes Elders as Harlem’s Asian Population Grows</a>
-      </h2>
-    </div>
 
+    <section class="section">
+      <div class="column is-full">
+        <h1 class="title is-2">Articles</h1>
+      </div>
+      <div class="columns is-multiline is-mobile content">
+
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a
+                      href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
+                      of Dinner: A Food Bank Nourishes Elders as Harlem’s Asian Population Grows</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>A close look at Asian elders in Harlem.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes
+                      Remain
+                      Overcrowded in Harlem Schools</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>Data-driven story about Harlem public schools.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is Opening a
+                      New
+                      Store
+                      on 125th Street</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>I reported the opening of the only Target in Harlem.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
   </div>
 </body>
 
