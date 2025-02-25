@@ -61,6 +61,7 @@
             color: #3C3C3C;
             /* Dark gray */
             padding: 20px;
+            font-size: 20px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             text-rendering: optimizeLegibility;
         }
@@ -73,6 +74,33 @@
             margin-top: 60px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
         }
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            /* Make Datawrapper graph responsive */
+            #datawrapper-container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            #datawrapper-vis-k5aIu {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                overflow: hidden;
+            }
+
+        }
     </style>
 </head>
 
@@ -82,83 +110,86 @@
             <div class="column is-three-fifths">
                 <h1 class="title is-1">Eggs have become rich people's food, regardless of price.</h1>
                 <h2 class="byline title is-5">By Tiffany Xinran Wang</h2>
-                    <p class="buttons">
-                        <button class="button is-small">
-                            <a href="https://github.com/tiff-xwang/Egg-Consumption-Demographics.git">
-                                <span class="icon is-small">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Read my code</span>
-                            </a>
-                        </button>
+                <p class="buttons">
+                    <button class="button is-small">
+                        <a href="https://github.com/tiff-xwang/Egg-Consumption-Demographics.git">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Read my code</span>
+                        </a>
+                    </button>
+                </p>
+
+
+
+                <section>
+                    <p class="subtitle is-6">
+                        People are eating fewer and fewer eggs, except the rich, who are consuming much more than
+                        others.
                     </p>
+                    <p class="subtitle is-6">
+                        The National Health and Nutrition Examination Survey show declining egg consumption among
+                        most income groups,
+                        despite ups and downs in egg prices between 2013 and 2023.
+                    </p>
+                    <p class="subtitle is-6">
+                        The survey asks particpants to report all the food they have consumed within the past 24
+                        hours
+                        and documents the specific dishes and their nutritional values.
+                    </p>
+                    <p class="subtitle is-6">
+                        Families whose income is four times or more than the poverty threshold are eating way more
+                        eggs than other income groups in recent years.
+                    </p>
+                </section>
 
 
-
-                    <section>
-                        <p class="subtitle is-5">
-                            People are eating fewer and fewer eggs, except the rich, who are consuming much more than
-                            others.
-                        </p>
-                        <p class="subtitle is-5">
-                            The National Health and Nutrition Examination Survey show declining egg consumption among
-                            most income groups,
-                            despite ups and downs in egg prices between 2013 and 2023.
-                        </p>
-                        <p class="subtitle is-5">
-                            The survey asks particpants to report all the food they have consumed within the past 24
-                            hours
-                            and documents the specific dishes and their nutritional values.
-                        </p>
-                        <p class="subtitle is-5">
-                            Families whose income is four times or more than the poverty threshold are eating way more
-                            eggs than other income groups in recent years.
-                        </p>
-                    </section>
-
-                    <section class="section">
+                <section class="section">
+                    <div id="datawrapper-container">
                         <div style="min-height:484px" id="datawrapper-vis-k5aIu">
                             <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/k5aIu/embed.js"
                                 charset="utf-8" data-target="#datawrapper-vis-k5aIu"></script><noscript><img
                                     src="https://datawrapper.dwcdn.net/k5aIu/full.png"
                                     alt="Families whose income is four times or more than the poverty threshold are eating way more eggs than other income groups in recent years." /></noscript>
                         </div>
-                    </section>
-                    <section>
+                    </div>
+                </section>
+                <section>
 
-                        <p class="subtitle is-5">
-                            According to the <a href="https://data.bls.gov/timeseries/APU0000708111">U.S. Bureau of
-                                Labor Statistics</a>, the average egg price peaked a little in
-                            2015, remained low from
-                            2016 to 2021, and peaked again between 2022 and 2023.
-                        </p>
-                        <p class="subtitle is-5">
-                            However, egg consumption levels do not seem to echo the price fluctuation.
-                        </p>
-                        <p class="subtitle is-5">
-                            "We don't even look at eggs now." Selene Henry, 26, earning $1400 a month, said she and her
-                            mom used to get eggs
-                            on every grocery trip. "I just don't like them anymore."
-                        </p>
-                        <p class="subtitle is-5">
-                            Aggie Ganz, 69, said she and her husband never used that many eggs, just "the usual amount."
-                            They live on social security and receive $36,000 a year.
-                        </p>
-                        <p class="subtitle is-5">
-                            On the other hand, Nikolas Panagios, 27, earning $150,000 a year, said he persistently buys
-                            a good amount of eggs because he is on
-                            a work-out diet.
-                        </p>
-                        <p class="subtitle is-5">
-                            Panagios said a few dollars of price fluctuation wouldn't change his diet,
-                            but "when the eggs are more expensive
-                            than the chicken, it doesn't make sense" to stick to eggs as his source of protein.
-                        </p>
+                    <p class="subtitle is-6">
+                        According to the <a href="https://data.bls.gov/timeseries/APU0000708111">U.S. Bureau of
+                            Labor Statistics</a>, the average egg price peaked a little in
+                        2015, remained low from
+                        2016 to 2021, and peaked again between 2022 and 2023.
+                    </p>
+                    <p class="subtitle is-6">
+                        However, egg consumption levels do not seem to echo the price fluctuation.
+                    </p>
+                    <p class="subtitle is-6">
+                        "We don't even look at eggs now." Selene Henry, 26, earning $1400 a month, said she and her
+                        mom used to get eggs
+                        on every grocery trip. "I just don't like them anymore."
+                    </p>
+                    <p class="subtitle is-6">
+                        Aggie Ganz, 69, said she and her husband never used that many eggs, just "the usual amount."
+                        They live on social security and receive $36,000 a year.
+                    </p>
+                    <p class="subtitle is-6">
+                        On the other hand, Nikolas Panagios, 27, earning $150,000 a year, said he persistently buys
+                        a good amount of eggs because he is on
+                        a work-out diet.
+                    </p>
+                    <p class="subtitle is-6">
+                        Panagios said a few dollars of price fluctuation wouldn't change his diet,
+                        but "when the eggs are more expensive
+                        than the chicken, it doesn't make sense" to stick to eggs as his source of protein.
+                    </p>
 
-                    </section>
-                    <section class="section">
-                        <img src="all_years_data.svg" width="900" height="400" style="border-radius: 12px">
-                    </section>
+                </section>
+                <section class="section">
+                    <img src="all_years_data.svg" width="900" height="400" style="border-radius: 12px">
+                </section>
 
 
             </div>
@@ -204,18 +235,18 @@
     <div class="full-width">
 
         <div class="column-container">
-            
+
             <div>
-                
+
             </div>
             <div>
-                
+
             </div>
             <div>
-                
+
             </div>
             <div>
-                
+
             </div>
         </div>
 
