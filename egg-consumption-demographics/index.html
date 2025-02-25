@@ -13,15 +13,16 @@
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
 
 
 
-   
 
-   
+
+
 
 
 
@@ -43,15 +44,18 @@
             color: #748C5B;
         }
 
-        /* Apply Codystar only to main headings */
+        /* Apply EB Garamond only to main headings */
         h1,
+        h2,
         h3 {
             font-family: 'EB Garamond', serif;
-            font-weight: 700; /* Makes headings bolder */
+            font-weight: 700;
+            /* Makes headings bolder */
         }
 
 
-        html, body {
+        html,
+        body {
             background-color: #F8F6F2;
             /* Soft white */
             color: #3C3C3C;
@@ -77,11 +81,11 @@
         <div class="columns is-mobile is-multiline is-centered">
             <div class="column is-three-fifths">
                 <h1 class="title is-1">Eggs have become rich people's food, regardless of price.</h1>
-                <h1 class="byline title is-3">By Tiffany Xinran Wang</h2>
+                <h2 class="byline title is-5">By Tiffany Xinran Wang</h2>
                     <p class="buttons">
-                        <button class="button">
+                        <button class="button is-small">
                             <a href="https://github.com/tiff-xwang/Egg-Consumption-Demographics.git">
-                                <span class="icon">
+                                <span class="icon is-small">
                                     <i class="fab fa-github"></i>
                                 </span>
                                 <span>Read my code</span>
@@ -123,7 +127,8 @@
                     <section>
 
                         <p class="subtitle is-5">
-                            According to the <a href="https://data.bls.gov/timeseries/APU0000708111">U.S. Bureau of Labor Statistics</a>, the average egg price peaked a little in
+                            According to the <a href="https://data.bls.gov/timeseries/APU0000708111">U.S. Bureau of
+                                Labor Statistics</a>, the average egg price peaked a little in
                             2015, remained low from
                             2016 to 2021, and peaked again between 2022 and 2023.
                         </p>
@@ -151,10 +156,68 @@
                         </p>
 
                     </section>
-
+                    <section class="section">
+                        <img src="all_years_data.svg" width="900" height="400" style="border-radius: 12px">
+                    </section>
 
 
             </div>
         </div>
+    </div>
+
+    <style>
+        .column-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .column-container>div {
+            flex: 1;
+            /* This makes each div take equal space */
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .column-container iframe {
+            width: 100%;
+            /* Make iframe fill its parent div */
+            height: 400px;
+            /* Set a fixed height or you can use 100% if parent has height */
+            border: none;
+            /* Optional: removes the default iframe border */
+        }
+
+        @media (max-width: 900px) {
+            .column-container {
+                flex-direction: column;
+                /* Stack columns vertically */
+            }
+
+            .column-container>div {
+                margin: 10px 0;
+                /* Adjust margins for vertical layout */
+            }
+        }
+    </style>
+
+    <div class="full-width">
+
+        <div class="column-container">
+            
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+        </div>
+
     </div>
 </body>
