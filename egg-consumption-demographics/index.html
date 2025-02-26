@@ -75,31 +75,54 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
         }
 
+        iframe {
+            padding-top: 1.2em;
+            padding-bottom: 1.2em;
+        }
+
+        iframe,
+        img {
+            max-width: 100%;
+        }
+
         /* margin on mobile */
+        /* Remove margins and padding for small screens */
         @media (max-width: 640px) {
-            body {
-                font-size: 18px;
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+                /* Prevents horizontal scrolling */
             }
 
-            .content {
-                padding-left: 0.5em;
-                padding-right: 0.5em;
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
 
-            /* Make Datawrapper graph responsive */
+            .column {
+                padding: 0 !important;
+            }
+
+
+            /* Ensure the Datawrapper graph is also full width */
             #datawrapper-container {
                 width: 100%;
                 max-width: 100%;
-                margin: 0 auto;
+                margin: 0;
+                padding: 0;
             }
 
-            #datawrapper-vis-k5aIu {
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 0 !important;
-                overflow: hidden;
+            #datawrapper-iframe {
+                width: 100%;
+                min-height: 300px;
+                /* Adjust height for mobile */
             }
-
         }
     </style>
 </head>
@@ -129,32 +152,30 @@
                         others.
                     </p>
                     <p class="subtitle is-6">
-                        The National Health and Nutrition Examination Survey show declining egg consumption among
+                        The National Health and Nutrition Examination Survey shows declining egg consumption among
                         most income groups,
-                        despite ups and downs in egg prices between 2013 and 2023.
+                        in spite of ups and downs in egg prices between 2013 and 2023.
                     </p>
                     <p class="subtitle is-6">
-                        The survey asks particpants to report all the food they have consumed within the past 24
+                        The survey asks participants to report all the food they have consumed within the past 24
                         hours
                         and documents the specific dishes and their nutritional values.
                     </p>
                     <p class="subtitle is-6">
-                        Families whose income is four times or more than the poverty threshold are eating way more
+                        Families whose income is four times or more than the poverty threshold are eating more
                         eggs than other income groups in recent years.
                     </p>
                 </section>
 
 
-                <section class="section">
-                    <div id="datawrapper-container">
-                        <div style="min-height:484px" id="datawrapper-vis-k5aIu">
-                            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/k5aIu/embed.js"
-                                charset="utf-8" data-target="#datawrapper-vis-k5aIu"></script><noscript><img
-                                    src="https://datawrapper.dwcdn.net/k5aIu/full.png"
-                                    alt="Families whose income is four times or more than the poverty threshold are eating way more eggs than other income groups in recent years." /></noscript>
-                        </div>
-                    </div>
-                </section>
+
+                <iframe title="Rich people are eating way more eggs" aria-label="Interactive line chart"
+                    id="datawrapper-chart-k5aIu" src="https://datawrapper.dwcdn.net/k5aIu/6/" scrolling="no"
+                    frameborder="0" style="border: none;" width="612" height="530" data-external="1">
+
+                </iframe>
+
+
                 <section>
 
                     <p class="subtitle is-6">
@@ -164,91 +185,43 @@
                         2016 to 2021, and peaked again between 2022 and 2023.
                     </p>
                     <p class="subtitle is-6">
-                        However, egg consumption levels do not seem to echo the price fluctuation.
+                        However, egg consumption levels do not echo the price fluctuation.
                     </p>
                     <p class="subtitle is-6">
-                        "We don't even look at eggs now." Selene Henry, 26, earning $1400 a month, said she and her
-                        mom used to get eggs
-                        on every grocery trip. "I just don't like them anymore."
+                        “We don't even look at eggs now,” said Selene Henry, 26, who earns $1,400 a month. She and her
+                        mom used to get eggs on every grocery trip. “I just don't like them anymore.”
                     </p>
                     <p class="subtitle is-6">
-                        Aggie Ganz, 69, said she and her husband never used that many eggs, just "the usual amount."
+                        Aggie Ganz, 69, said she and her husband never used that many eggs, just “the usual amount.”
                         They live on social security and receive $36,000 a year.
                     </p>
                     <p class="subtitle is-6">
-                        On the other hand, Nikolas Panagios, 27, earning $150,000 a year, said he persistently buys
+                        On the other hand, Nikolas Panagios, 27, who earns $150,000 a year, said he persistently buys
                         a good amount of eggs because he is on
                         a work-out diet.
                     </p>
                     <p class="subtitle is-6">
-                        Panagios said a few dollars of price fluctuation wouldn't change his diet,
-                        but "when the eggs are more expensive
-                        than the chicken, it doesn't make sense" to stick to eggs as his source of protein.
+                        Panagios said a few dollars of fluctuation wouldn't change his diet,
+                        but “when the eggs are more expensive than the chicken, it doesn't make sense” to stick to eggs
+                        as his source of protein.
                     </p>
 
                 </section>
-                <section class="section">
+                <section>
                     <img src="all_years_data.svg" width="900" height="400" style="border-radius: 12px">
                 </section>
 
+                <section>
+                    <p class="subtitle is-6">
+                        The poverty threshold changes every year. It’s around $20,000 for a two-person family.
+                        Income-to-poverty ratio five, for example, means the family’s annual income is around or above
+                        $100,000.
+                    </p>
+                </section>
 
             </div>
         </div>
     </div>
 
-    <style>
-        .column-container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-        }
 
-        .column-container>div {
-            flex: 1;
-            /* This makes each div take equal space */
-            padding: 20px;
-            margin: 10px;
-        }
-
-        .column-container iframe {
-            width: 100%;
-            /* Make iframe fill its parent div */
-            height: 400px;
-            /* Set a fixed height or you can use 100% if parent has height */
-            border: none;
-            /* Optional: removes the default iframe border */
-        }
-
-        @media (max-width: 900px) {
-            .column-container {
-                flex-direction: column;
-                /* Stack columns vertically */
-            }
-
-            .column-container>div {
-                margin: 10px 0;
-                /* Adjust margins for vertical layout */
-            }
-        }
-    </style>
-
-    <div class="full-width">
-
-        <div class="column-container">
-
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-        </div>
-
-    </div>
 </body>
