@@ -67,6 +67,18 @@
       margin-top: 60px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
     }
+
+    /* margin on mobile */
+    @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
   </style>
 </head>
 
@@ -83,6 +95,18 @@
           <h2 class="title is-2">Data</h2>
         </div>
         <div class="columns is-multiline is-mobile content">
+
+          <div class="column is-two-thirds">
+            <h3 class="title is-5">
+              <a href="https://tiff-xwang.github.io/Egg-Consumption-Demographics">Egg Consumption by Income</a>
+            </h3>
+          </div>
+
+          <div class="column is-one-third">
+            <img src="egg-consumption-demographics/all_years_data.svg">
+          </div>
+
+
           <div class="column is-one-third">
             img goes here
           </div>
