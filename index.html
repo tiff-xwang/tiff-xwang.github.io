@@ -20,11 +20,7 @@
     rel="stylesheet">
 
 
-  <!-- Fallback in case JavaScript is disabled -->
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
-  </noscript>
+
 
 
   <style>
@@ -68,179 +64,222 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
     }
 
+    .portrait-image {
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Make all images in cards responsive */
+    .card-image img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      /* Make all cards same height */
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content {
+      flex-grow: 1;
+      /* Makes content area fill available space */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content .content {
+      flex-grow: 1;
+      /* Push button to bottom */
+    }
+
     /* margin on mobile */
     @media (max-width: 640px) {
-            body {
-                font-size: 18px;
-            }
+      body {
+        font-size: 18px;
+      }
 
-            .content {
-                padding-left: 0.5em;
-                padding-right: 0.5em;
-            }
-        }
+      .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <h1 class="title is-1">Tiffany Xinran Wang</h1>
-    <h4 class="subtitle is-4">I'm a data journalism student at Columbia Journalism School.</p>
-      <section class="section">
-        <img src="portrait.jpg" width="300" height="400" style="border-radius: 12px">
-      </section>
+    <h4 class="subtitle is-4">I'm a data journalism student at Columbia Journalism School.</h4>
+    <section class="section">
+      <img src="portrait.jpg" alt="Portrait of Tiffany Xinran Wang" class="portrait-image"
+        style="max-width: 100%; height: auto; border-radius: 12px;">
+    </section>
 
-      <section class="section highlight-box">
-        <div class="column is-full">
-          <h2 class="title is-2">Data</h2>
+    <section class="section highlight-box">
+      <div class="column is-full">
+        <h2 class="title is-2">Data</h2>
+      </div>
+      <div class="columns is-multiline is-mobile content">
+
+        <div class="column is-two-thirds">
+          <h3 class="title is-5">
+            <a href="https://tiff-xwang.github.io/egg-consumption-demographics">Egg Consumption by Income</a>
+          </h3>
         </div>
-        <div class="columns is-multiline is-mobile content">
 
-          <div class="column is-two-thirds">
-            <h3 class="title is-5">
-              <a href="https://tiff-xwang.github.io/Egg-Consumption-Demographics">Egg Consumption by Income</a>
-            </h3>
+        <div class="column is-one-third">
+          <img src="egg-consumption-demographics/all_years_data.svg">
+        </div>
+
+
+        <div class="column is-one-third">
+          <img src="asylum-timeline/datawrapper.png">
+        </div>
+
+        <div class="column is-two-thirds">
+          <h3 class="title is-5">
+            <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
+          </h3>
+
+          <div class="tags">
+            <span class="tag is-success is-light is-normal">Pandas</span>
+            <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+            <span class="tag is-success is-light is-normal">Three</span>
           </div>
-
-          <div class="column is-one-third">
-            <img src="egg-consumption-demographics/all_years_data.svg">
+          <div class="content">
+            <p>This is an asylum application tracker.</p>
+            <button class="button is-warning is-light is-small">
+              <a href="https://github.com/tiff-xwang/asylum_timeline.git">Read my code</a>
+            </button>
           </div>
+        </div>
+      </div>
+    </section>
 
 
-          <div class="column is-one-third">
-            img goes here
-          </div>
 
-          <div class="column is-two-thirds">
-            <h3 class="title is-5">
-              <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
-            </h3>
+    <section class="section" style="padding: 30px; margin-top: 20px">
+      <div class=" column is-full">
+        <h2 class="title is-2">Articles</h2>
+      </div>
+      <div class="columns is-multiline is-mobile content">
 
-            <div class="tags">
-              <span class="tag is-success is-light is-normal">Pandas</span>
-              <span class="tag is-success is-light is-normal">Beautiful Soup</span>
-              <span class="tag is-success is-light is-normal">Three</span>
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="heart-of-dinner/postcards.jpg" alt="Postcards with handwritten messages" />
+              </figure>
             </div>
-            <div class="content">
-              <p>This is an asylum application tracker.</p>
-              <button class="button is-warning is-light is-small">
-                <a href="https://github.com/tiff-xwang/asylum_timeline.git">Read my code</a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <section class="section" style="padding: 30px; margin-top: 20px">
-        <div class=" column is-full">
-          <h2 class="title is-2">Articles</h2>
-        </div>
-        <div class="columns is-multiline is-mobile content">
-
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-5by3">
-                  <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <h3 class="title is-5">
-                      <a
-                        href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
-                        of Dinner: A Food Bank Nourishes Elders as Harlem’s Asian Population Grows</a>
-                    </h3>
-                    <div class="tags">
-                      <span class="tag is-success is-light is-normal">Pandas</span>
-                      <span class="tag is-success is-light is-normal">Beautiful Soup</span>
-                      <span class="tag is-success is-light is-normal">Three</span>
-                    </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a
+                      href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
+                      of Dinner: A Food Bank Nourishes Elders as Harlem’s Asian Population Grows</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
                   </div>
                 </div>
+              </div>
 
-                <div class="content">
-                  <p>A close look at Asian elders in Harlem.</p>
-                  <button class="button is-warning is-light is-small">Read my code</button>
-                </div>
+              <div class="content">
+                <p>A close look at Asian elders in Harlem.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
               </div>
             </div>
           </div>
-
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-5by3">
-                  <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <h3 class="title is-5">
-                      <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes
-                        Remain
-                        Overcrowded in Harlem Schools</a>
-                    </h3>
-                    <div class="tags">
-                      <span class="tag is-success is-light is-normal">Pandas</span>
-                      <span class="tag is-success is-light is-normal">Beautiful Soup</span>
-                      <span class="tag is-success is-light is-normal">Three</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="content">
-                  <p>Data-driven story about Harlem public schools.</p>
-                  <button class="button is-warning is-light is-small">Read my code</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-5by3">
-                  <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <h3 class="title is-5">
-                      <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is Opening
-                        a
-                        New
-                        Store
-                        on 125th Street</a>
-                    </h3>
-                    <div class="tags">
-                      <span class="tag is-success is-light is-normal">Pandas</span>
-                      <span class="tag is-success is-light is-normal">Beautiful Soup</span>
-                      <span class="tag is-success is-light is-normal">Three</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="content">
-                  <p>I reported the opening of the only Target in Harlem.</p>
-                  <button class="button is-warning is-light is-small">Read my code</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
         </div>
-      </section>
+
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="overcrowded-school/public-school.jpg" alt="Luis Munoz Rivera Public School" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes
+                      Remain
+                      Overcrowded in Harlem Schools</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>Data-driven story about Harlem public schools.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">
+                    <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is Opening
+                      a
+                      New
+                      Store
+                      on 125th Street</a>
+                  </h3>
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Pandas</span>
+                    <span class="tag is-success is-light is-normal">Beautiful Soup</span>
+                    <span class="tag is-success is-light is-normal">Three</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>I reported the opening of the only Target in Harlem.</p>
+                <button class="button is-warning is-light is-small">Read my code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
   </div>
 </body>
 
