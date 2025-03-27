@@ -133,11 +133,30 @@
       z-index: 0;
     }
 
-    .bio-1 { grid-column: 1 / 10; margin-left: 0; }
-    .bio-2 { grid-column: 2 / 11; margin-left: 20px; }
-    .bio-3 { grid-column: 1 / 9; margin-left: 40px; }
-    .bio-4 { grid-column: 3 / 12; margin-left: 10px; }
-    .bio-5 { grid-column: 2 / 10; margin-left: 30px; }
+    .bio-1 {
+      grid-column: 1 / 10;
+      margin-left: 0;
+    }
+
+    .bio-2 {
+      grid-column: 2 / 11;
+      margin-left: 20px;
+    }
+
+    .bio-3 {
+      grid-column: 1 / 9;
+      margin-left: 40px;
+    }
+
+    .bio-4 {
+      grid-column: 3 / 12;
+      margin-left: 10px;
+    }
+
+    .bio-5 {
+      grid-column: 2 / 10;
+      margin-left: 30px;
+    }
 
     /* margin on mobile */
     @media (max-width: 640px) {
@@ -149,17 +168,6 @@
         padding-left: 0.5em;
         padding-right: 0.5em;
       }
-
-      .box .tags {
-        display: flex;
-        flex-wrap: wrap;
-      }
-  
-      .box .tag {
-        margin-bottom: 5px;
-        font-size: 0.7rem;
-        white-space: normal;
-      }
     }
   </style>
 </head>
@@ -167,7 +175,7 @@
 <body>
   <div class="container">
     <h1 class="title is-1">Tiffany Xinran Wang</h1>
-    
+
     <!-- New bio section with fancy styling -->
     <div class="bio-grid">
       <div class="bio-1">
@@ -186,7 +194,7 @@
         <p class="bio-item"><span>Producer of 60+ clips on AP Radio</span></p>
       </div>
     </div>
-    
+
     <section class="section">
       <img src="portrait.jpg" alt="Portrait of Tiffany Xinran Wang" class="portrait-image"
         style="max-width: 100%; height: auto; border-radius: 12px;">
@@ -198,15 +206,24 @@
       </div>
 
       <div class="columns is-multiline is-mobile content">
-        <!-- Add a parent container with display: flex -->
-        <div style="display: flex; width: 100%;">
-          <div class="column is-one-fifth" style="height: 100%;">
-            <!-- Add height: 100% to the box -->
-            <div class="box" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
-              <div class="media is-flex is-justify-content-center is-align-items-center">
-                <figure class="image is-96x96" id="cover-image-rasa" style="cursor: pointer;">
-                  <img class="is-rounded" src="rasa_xmas_cover.png">
-                  <div id="play-icon-rasa" style="position: absolute; 
+        <div class="
+            column
+            is-one-third-mobile
+            is-one-fifth-tablet
+            is-one-fifth-desktop
+            is-two-fifths-widescreen
+            is-one-half-fullhd
+          ">
+          <!-- Add a parent container with display: flex -->
+          <div style="display: flex; width: 100%;">
+            <div class="column" style="height: 100%;">
+              <!-- Add height: 100% to the box -->
+              <div class="box"
+                style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="media is-flex is-justify-content-center is-align-items-center">
+                  <figure class="image is-96x96" id="cover-image-rasa" style="cursor: pointer;">
+                    <img class="is-rounded" src="rasa_xmas_cover.png">
+                    <div id="play-icon-rasa" style="position: absolute; 
                         top: 50%; 
                         left: 50%; 
                         transform: translate(-50%, -50%);
@@ -216,35 +233,36 @@
                         border-radius: 50%; 
                         padding: 0.3rem 0.5rem;
                         transition: opacity 0.3s ease;">
-                    ▶
-                  </div>
-                </figure>
-              </div>
-              <div id="audio-container-rasa" style="display: none;">
-                <audio id="rasa-audio">
-                  <source src="rasa_xmas.mp3" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-              <!-- Don't use flex-grow on content -->
-              <div class="content">
-                <div class="tags">
-                  <span class="tag is-success is-light is-normal">Duration: 00:53 | AP Radio</span>
+                      ▶
+                    </div>
+                  </figure>
                 </div>
-                <p>
-                  Lithuanian pianist's holiday album and her family's history with Soviet oppression
-                </p>
+                <div id="audio-container-rasa" style="display: none;">
+                  <audio id="rasa-audio">
+                    <source src="rasa_xmas.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <!-- Don't use flex-grow on content -->
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Duration: 00:53 | AP Radio</span>
+                  </div>
+                  <p>
+                    Lithuanian pianist's holiday album and her family's history with Soviet oppression
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="column is-one-fifth" style="height: 100%;">
-            <!-- Add height: 100% to the box -->
-            <div class="box" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
-              <div class="media is-flex is-justify-content-center is-align-items-center">
-                <figure class="image is-96x96" id="cover-image-juubensha" style="cursor: pointer;">
-                  <img class="is-rounded" src="Juubensha.jpg">
-                  <div id="play-icon-juubensha" style="position: absolute; 
+            <div class="column" style="height: 100%;">
+              <!-- Add height: 100% to the box -->
+              <div class="box"
+                style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="media is-flex is-justify-content-center is-align-items-center">
+                  <figure class="image is-96x96" id="cover-image-juubensha" style="cursor: pointer;">
+                    <img class="is-rounded" src="Juubensha.jpg">
+                    <div id="play-icon-juubensha" style="position: absolute; 
                         top: 50%; 
                         left: 50%; 
                         transform: translate(-50%, -50%);
@@ -254,24 +272,25 @@
                         border-radius: 50%; 
                         padding: 0.3rem 0.5rem;
                         transition: opacity 0.3s ease;">
-                    ▶
-                  </div>
-                </figure>
-              </div>
-              <div id="audio-container-juubensha" style="display: none;">
-                <audio id="juubensha-audio">
-                  <source src="Juubensha.mp3" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-              <!-- Don't use flex-grow on content -->
-              <div class="content">
-                <div class="tags">
-                  <span class="tag is-success is-light is-normal">Duration: 04:11 | Columbia</span>
+                      ▶
+                    </div>
+                  </figure>
                 </div>
-                <p>
-                  Live-action script game in Manhattan, New York
-                </p>
+                <div id="audio-container-juubensha" style="display: none;">
+                  <audio id="juubensha-audio">
+                    <source src="Juubensha.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <!-- Don't use flex-grow on content -->
+                <div class="content">
+                  <div class="tags">
+                    <span class="tag is-success is-light is-normal">Duration: 04:11 | Columbia</span>
+                  </div>
+                  <p>
+                    Live-action script game in Manhattan, New York
+                  </p>
+                </div>
               </div>
             </div>
           </div>
