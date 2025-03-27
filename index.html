@@ -19,10 +19,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
     rel="stylesheet">
 
-
-
-
-
   <style>
     .content figure {
       margin-left: 0;
@@ -43,7 +39,6 @@
       /* Makes headings bolder */
     }
 
-
     html,
     body {
       background-color: #F8F6F2;
@@ -54,7 +49,6 @@
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-rendering: optimizeLegibility;
     }
-
 
     .highlight-box {
       background: #F5F1E6;
@@ -106,6 +100,45 @@
       /* Push button to bottom */
     }
 
+    /* Bio styling */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin: 30px 0;
+    }
+
+    .bio-item {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      position: relative;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .bio-item span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bio-item:before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      background: rgba(116, 140, 91, 0.2);
+      bottom: 5px;
+      left: -5px;
+      right: -5px;
+      z-index: 0;
+    }
+
+    .bio-1 { grid-column: 1 / 10; margin-left: 0; }
+    .bio-2 { grid-column: 2 / 11; margin-left: 20px; }
+    .bio-3 { grid-column: 1 / 9; margin-left: 40px; }
+    .bio-4 { grid-column: 3 / 12; margin-left: 10px; }
+    .bio-5 { grid-column: 2 / 10; margin-left: 30px; }
+
     /* margin on mobile */
     @media (max-width: 640px) {
       body {
@@ -123,204 +156,326 @@
 <body>
   <div class="container">
     <h1 class="title is-1">Tiffany Xinran Wang</h1>
-    <h4 class="subtitle is-4">I'm a data journalism student at Columbia Journalism School.</h4>
+    
+    <!-- New bio section with fancy styling -->
+    <div class="bio-grid">
+      <div class="bio-1">
+        <p class="bio-item"><span>Current data journalism student at Columbia Journalism School</span></p>
+      </div>
+      <div class="bio-2">
+        <p class="bio-item"><span>Journalism and Film & TV major, Korean minor at Boston University</span></p>
+      </div>
+      <div class="bio-3">
+        <p class="bio-item"><span>K-pop radio show host at WTBU for four years</span></p>
+      </div>
+      <div class="bio-4">
+        <p class="bio-item"><span>Creator and host of 30+ talk show-styled podcast episodes</span></p>
+      </div>
+      <div class="bio-5">
+        <p class="bio-item"><span>Producer of 60+ clips on AP Radio</span></p>
+      </div>
+    </div>
+    
     <section class="section">
       <img src="portrait.jpg" alt="Portrait of Tiffany Xinran Wang" class="portrait-image"
         style="max-width: 100%; height: auto; border-radius: 12px;">
     </section>
 
-    <section class="section highlight-box">
-      <div class="column is-full">
-        <h2 class="title is-2">Data</h2>
-      </div>
-      <div class="columns is-multiline is-mobile content">
-
-
-        
-        <div class="column is-one-third">
-          <a href="https://tiff-xwang.github.io/valentines-movies">
-            <img src="valentines-movies/template-full.png">
-          </a>
-        </div>
-
-        <div class="column is-two-thirds">
-          <h3 class="title is-5">
-            <a href="https://tiff-xwang.github.io/valentines-movies">Valentine's Anti-Valentine Movies</a>
-          </h3>
-
-          <div class="tags">
-            <span class="tag is-success is-light is-normal">Pandas</span>
-            <span class="tag is-success is-light is-normal">BeautifulSoup</span>
-            <span class="tag is-success is-light is-normal">ggplot</span>
-            <span class="tag is-success is-light is-normal">regex</span>
-          </div>
-          <div class="content">
-            <p>Anti-romance movies had dominated the screen during the past two Valentine’s Days.
-              Couples killer, zombie castrator – you name it.</p>
-            <button class="button is-warning is-light is-small">
-              <a href="https://github.com/tiff-xwang/Valentines-Anti-Romance-Movies.git">Read my code</a>
-            </button>
-          </div>
-        </div>
-      
-
-
-
-
-
-
-        <div class="column is-two-thirds">
-          <h3 class="title is-5">
-            <a href="https://tiff-xwang.github.io/egg-consumption-demographics">Egg Consumption by Income</a>
-          </h3>
-          <div class="tags">
-            <span class="tag is-success is-light is-normal">Pandas</span>
-            <span class="tag is-success is-light is-normal">ggplot</span>
-            <span class="tag is-success is-light is-normal">Datawrapper</span>
-          </div>
-          <div class="content">
-            <p>This is an analysis of egg consumption patterns in relation to family income.</p>
-            <button class="button is-warning is-light is-small">
-              <a href="https://github.com/tiff-xwang/Egg-Consumption-Demographics.git">Read my code</a>
-            </button>
-          </div>
-        </div>
-      
-        <div class="column is-one-third">
-          <a href="https://tiff-xwang.github.io/egg-consumption-demographics">
-            <img src="egg-consumption-demographics/all_years_data.svg">
-          </a>
-        </div>
-
-
-
-
-        <div class="column is-one-third">
-          <a href="https://datawrapper.dwcdn.net/cjvdt/2/">
-            <img src="asylum-timeline/datawrapper.png">
-          </a>
-        </div>
-
-        <div class="column is-two-thirds">
-          <h3 class="title is-5">
-            <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
-          </h3>
-
-          <div class="tags">
-            <span class="tag is-success is-light is-normal">Pandas</span>
-            <span class="tag is-success is-light is-normal">API</span>
-            <span class="tag is-success is-light is-normal">Datawrapper</span>
-          </div>
-          <div class="content">
-            <p>This is an asylum application tracker.</p>
-            <button class="button is-warning is-light is-small">
-              <a href="https://github.com/tiff-xwang/asylum_timeline.git">Read my code</a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
     <section class="section" style="padding: 30px; margin-top: 20px">
-      <div class=" column is-full">
-        <h2 class="title is-2">Articles</h2>
+      <div class="column is-full">
+        <h2 class="title is-2">Audio</h2>
       </div>
+
       <div class="columns is-multiline is-mobile content">
-
-
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-5by3">
-                <img src="heart-of-dinner/postcards.jpg" alt="Postcards with handwritten messages" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <h3 class="title is-5">
-                    <a
-                      href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
-                      of Dinner: A Food Bank Nourishes Elders as Harlem’s Asian Population Grows</a>
-                  </h3>
-                  
-                </div>
+        <!-- Add a parent container with display: flex -->
+        <div style="display: flex; width: 100%;">
+          <div class="column is-one-fifth" style="height: 100%;">
+            <!-- Add height: 100% to the box -->
+            <div class="box" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+              <div class="media is-flex is-justify-content-center is-align-items-center">
+                <figure class="image is-96x96" id="cover-image-rasa" style="cursor: pointer;">
+                  <img class="is-rounded" src="rasa_xmas_cover.png">
+                  <div id="play-icon-rasa" style="position: absolute; 
+                        top: 50%; 
+                        left: 50%; 
+                        transform: translate(-50%, -50%);
+                        font-size: 1.2rem; 
+                        color: white; 
+                        background: rgba(0, 0, 0, 0.4); 
+                        border-radius: 50%; 
+                        padding: 0.3rem 0.5rem;
+                        transition: opacity 0.3s ease;">
+                    ▶
+                  </div>
+                </figure>
               </div>
-
+              <div id="audio-container-rasa" style="display: none;">
+                <audio id="rasa-audio">
+                  <source src="rasa_xmas.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              <!-- Don't use flex-grow on content -->
               <div class="content">
-                <p>A close look at Asian elders in Harlem.</p>
-                
+                <div class="tags">
+                  <span class="tag is-success is-light is-normal">Duration: 00:53 | AP Radio</span>
+                </div>
+                <p>
+                  Lithuanian pianist's holiday album and her family's history with Soviet oppression
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-one-fifth" style="height: 100%;">
+            <!-- Add height: 100% to the box -->
+            <div class="box" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+              <div class="media is-flex is-justify-content-center is-align-items-center">
+                <figure class="image is-96x96" id="cover-image-juubensha" style="cursor: pointer;">
+                  <img class="is-rounded" src="Juubensha.jpg">
+                  <div id="play-icon-juubensha" style="position: absolute; 
+                        top: 50%; 
+                        left: 50%; 
+                        transform: translate(-50%, -50%);
+                        font-size: 1.2rem; 
+                        color: white; 
+                        background: rgba(0, 0, 0, 0.4); 
+                        border-radius: 50%; 
+                        padding: 0.3rem 0.5rem;
+                        transition: opacity 0.3s ease;">
+                    ▶
+                  </div>
+                </figure>
+              </div>
+              <div id="audio-container-juubensha" style="display: none;">
+                <audio id="juubensha-audio">
+                  <source src="Juubensha.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              <!-- Don't use flex-grow on content -->
+              <div class="content">
+                <div class="tags">
+                  <span class="tag is-success is-light is-normal">Duration: 04:11 | Columbia</span>
+                </div>
+                <p>
+                  Live-action script game in Manhattan, New York
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <!-- JavaScript remains the same -->
+      <script>
+        const coverImageRasa = document.getElementById("cover-image-rasa");
+        const audioContainerRasa = document.getElementById("audio-container-rasa");
+        const audioRasa = document.getElementById("rasa-audio");
+        const playIconRasa = document.getElementById("play-icon-rasa");
 
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-5by3">
-                <img src="overcrowded-school/public-school.jpg" alt="Luis Munoz Rivera Public School" />
-              </figure>
+        coverImageRasa.addEventListener("click", () => {
+          if (audioRasa.paused) {
+            audioRasa.play();
+            playIconRasa.textContent = "❚❚";
+          } else {
+            audioRasa.pause();
+            playIconRasa.textContent = "▶";
+          }
+        });
+
+        audioRasa.addEventListener("ended", () => {
+          playIconRasa.textContent = "▶";
+        });
+
+        const coverImageJuubensha = document.getElementById("cover-image-juubensha");
+        const audioContainerJuubensha = document.getElementById("audio-container-juubensha");
+        const audioJuubensha = document.getElementById("juubensha-audio");
+        const playIconJuubensha = document.getElementById("play-icon-juubensha");
+
+        coverImageJuubensha.addEventListener("click", () => {
+          if (audioJuubensha.paused) {
+            audioJuubensha.play();
+            playIconJuubensha.textContent = "❚❚";
+          } else {
+            audioJuubensha.pause();
+            playIconJuubensha.textContent = "▶";
+          }
+        });
+
+        audioJuubensha.addEventListener("ended", () => {
+          playIconJuubensha.textContent = "▶";
+        });
+      </script>
+
+      <section class="section highlight-box">
+        <div class="column is-full">
+          <h2 class="title is-2">Data</h2>
+        </div>
+        <div class="columns is-multiline is-mobile content">
+          <div class="column is-one-third">
+            <a href="https://tiff-xwang.github.io/valentines-movies">
+              <img src="valentines-movies/template-full.png">
+            </a>
+          </div>
+
+          <div class="column is-two-thirds">
+            <h3 class="title is-5">
+              <a href="https://tiff-xwang.github.io/valentines-movies">Valentine's Anti-Valentine Movies</a>
+            </h3>
+
+            <div class="tags">
+              <span class="tag is-success is-light is-normal">Pandas</span>
+              <span class="tag is-success is-light is-normal">BeautifulSoup</span>
+              <span class="tag is-success is-light is-normal">ggplot</span>
+              <span class="tag is-success is-light is-normal">regex</span>
             </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <h3 class="title is-5">
-                    <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes
-                      Remain
-                      Overcrowded in Harlem Schools</a>
-                  </h3>
-                  <div class="tags">
-                    <span class="tag is-success is-light is-normal">Excel</span>
-                    <span class="tag is-success is-light is-normal">Datawrapper</span>
+            <div class="content">
+              <p>Anti-romance movies had dominated the screen during the past two Valentine's Days.
+                Couples killer, zombie castrator – you name it.</p>
+              <button class="button is-warning is-light is-small">
+                <a href="https://github.com/tiff-xwang/Valentines-Anti-Romance-Movies.git">Read my code</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="column is-two-thirds">
+            <h3 class="title is-5">
+              <a href="https://tiff-xwang.github.io/egg-consumption-demographics">Egg Consumption by Income</a>
+            </h3>
+            <div class="tags">
+              <span class="tag is-success is-light is-normal">Pandas</span>
+              <span class="tag is-success is-light is-normal">ggplot</span>
+              <span class="tag is-success is-light is-normal">Datawrapper</span>
+            </div>
+            <div class="content">
+              <p>This is an analysis of egg consumption patterns in relation to family income.</p>
+              <button class="button is-warning is-light is-small">
+                <a href="https://github.com/tiff-xwang/Egg-Consumption-Demographics.git">Read my code</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="column is-one-third">
+            <a href="https://tiff-xwang.github.io/egg-consumption-demographics">
+              <img src="egg-consumption-demographics/all_years_data.svg">
+            </a>
+          </div>
+
+          <div class="column is-one-third">
+            <a href="https://datawrapper.dwcdn.net/cjvdt/2/">
+              <img src="asylum-timeline/datawrapper.png">
+            </a>
+          </div>
+
+          <div class="column is-two-thirds">
+            <h3 class="title is-5">
+              <a href="https://datawrapper.dwcdn.net/cjvdt/2/">Asylum Timeline</a>
+            </h3>
+
+            <div class="tags">
+              <span class="tag is-success is-light is-normal">Pandas</span>
+              <span class="tag is-success is-light is-normal">API</span>
+              <span class="tag is-success is-light is-normal">Datawrapper</span>
+            </div>
+            <div class="content">
+              <p>This is an asylum application tracker.</p>
+              <button class="button is-warning is-light is-small">
+                <a href="https://github.com/tiff-xwang/asylum_timeline.git">Read my code</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding: 30px; margin-top: 20px">
+        <div class="column is-full">
+          <h2 class="title is-2">Articles</h2>
+        </div>
+        <div class="columns is-multiline is-mobile content">
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-5by3">
+                  <img src="heart-of-dinner/postcards.jpg" alt="Postcards with handwritten messages" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <h3 class="title is-5">
+                      <a
+                        href="https://theuptowner.org/heart-of-dinner-a-food-bank-nourishes-elders-as-harlems-asian-population-grows/">Heart
+                        of Dinner: A Food Bank Nourishes Elders as Harlem's Asian Population Grows</a>
+                    </h3>
                   </div>
                 </div>
-              </div>
 
-              <div class="content">
-                <p>Data-driven story about Harlem public schools.</p>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-5by3">
-                <img src="harlem-target/target.jpg" alt="Target in Harlem, NY" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <h3 class="title is-5">
-                    <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is Opening
-                      a
-                      New
-                      Store
-                      on 125th Street</a>
-                  </h3>
-                  
+                <div class="content">
+                  <p>A close look at Asian elders in Harlem.</p>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="content">
-                <p>I reported the opening of the only Target in Harlem.</p>
-                
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-5by3">
+                  <img src="overcrowded-school/public-school.jpg" alt="Luis Munoz Rivera Public School" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <h3 class="title is-5">
+                      <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/">K-3 Classes
+                        Remain
+                        Overcrowded in Harlem Schools</a>
+                    </h3>
+                    <div class="tags">
+                      <span class="tag is-success is-light is-normal">Excel</span>
+                      <span class="tag is-success is-light is-normal">Datawrapper</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p>Data-driven story about Harlem public schools.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-5by3">
+                  <img src="harlem-target/target.jpg" alt="Target in Harlem, NY" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <h3 class="title is-5">
+                      <a href="https://theuptowner.org/target-is-opening-a-new-store-on-125th-street/">Target Is
+                        Opening
+                        a
+                        New
+                        Store
+                        on 125th Street</a>
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p>I reported the opening of the only Target in Harlem.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-
-      </div>
+      </section>
     </section>
   </div>
 </body>
