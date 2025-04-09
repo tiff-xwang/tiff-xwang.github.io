@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Dog Waste Problem in New York</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+	<!-- Preconnect to speed up Google Fonts loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Preload the fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+		rel="stylesheet">
+
+	<!-- Fallback in case JavaScript is disabled -->
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
+	</noscript>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style>
+		.content figure {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		a {
+			color: #748C5B;
+		}
+
+		/* Apply EB Garamond only to main headings */
+		h1,
+		h2,
+		h3 {
+			font-family: 'EB Garamond', serif;
+			font-weight: 700;
+		}
+
+
+		html,
+		body {
+			background-color: #F8F6F2;
+			/* Soft white */
+			color: #3C3C3C;
+			/* Dark gray */
+			padding: 20px;
+			font-size: 18px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			text-rendering: optimizeLegibility;
+		}
+
+		p.chart-title {
+			color: #3C3C3C;
+			font-size: 20px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-weight: 700;
+		}
+
+		p.chart-subtitle {
+			color: #3C3C3C;
+			font-size: 15px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+
+
+		.highlight-box {
+			background: #F5F1E6;
+			padding: 30px;
+			border-radius: 12px;
+			margin-top: 60px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+		}
+
+		iframe,
+		img {
+			padding-top: 1.2em;
+			padding-bottom: 1.2em;
+			max-width: 100%;
+		}
+
+
+		/* margin on mobile */
+		/* Remove margins and padding for small screens */
+		@media (max-width: 640px) {
+
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				overflow-x: hidden;
+				/* Prevents horizontal scrolling */
+			}
+
+			.container {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+
+			.column {
+				padding: 0 !important;
+			}
+		}
+
+
+		.chart-title,
+		.chart-subtitle {
+			text-align: left;
+			width: 100%;
+			word-wrap: break-word;
+		}
+
+		/* Adjust column responsive behavior */
+		@media (max-width: 768px) {
+			.columns {
+				display: block;
+			}
+
+			.column {
+				width: 100% !important;
+				padding: 10px !important;
+			}
+
+			.is-narrow {
+				width: 100% !important;
+			}
+
+			.chart-title,
+			.chart-subtitle {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+		}
+
+		/* Add to your existing CSS */
+		#g-template-box {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.column.is-two-thirds #g-template-full {
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		@media (max-width: 768px) {
+			.columns {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.column.is-two-thirds,
+			.column.is-one-third {
+				width: 100% !important;
+			}
+
+			#g-template-box {
+				margin-bottom: 2rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="columns is-mobile is-multiline is-centered">
+			<div class="column is-two-thirds">
+				<h1 class="title is-1">Time to Save New York Streets from Dog Poop</h1>
+				<h2 class="byline title is-5">By
+					<a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
+				</h2>
+				<div class="is-flex is-align-items-center mb-5">
+					<h2 class="date title is-6 mb-0 mr-4">April 8, 2025</h2>
+					<button class="button is-small">
+						<a href="https://github.com/tiff-xwang/Dog_Waste_Problem.git">
+							<span class="icon is-small">
+								<i class="fab fa-github"></i>
+							</span>
+							<span>Read my code</span>
+						</a>
+					</button>
+				</div>
+
+
+				<div class="box">
+					<article class="media">
+					  <div class="media-left">
+						<figure class="image is-64x64" id="cover-image-dogwaste" 
+						style="position: relative; cursor: pointer; ">
+						  <img src="961744161457_.pic.jpg" alt="Image" />
+						  <div id="play-icon-dogwaste" style="position: absolute; 
+									top: 85%; 
+									left: 50%; 
+									transform: translate(-50%, -50%);
+									font-size: 1rem; 
+									color: white; 
+									background: rgba(0, 0, 0, 0.4); 
+									border-radius: 50%; 
+									padding: 0.3rem 0.5rem;
+									transition: opacity 0.3s ease;">
+							▶
+						  </div>
+						</figure>
+						<div id="audio-container-dogwaste" style="display: none;">
+						  <audio id="dogwaste-audio">
+							<source src="Tiffany_Dog_Waste.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						  </audio>
+						</div>
+					  </div>
+						
+					  
+					  <div class="media-content">
+						<div class="content">
+						  <p>
+							<strong>A Proposal to Curb Dog Waste on New York City Streets</strong>
+							<br />
+							<small>By Tiffany Xinran Wang | Columbia Radio News</small>
+							<br />
+							<small>Duration: 03:45</small>
+						  </p>
+						</div>
+					  </div>
+					</article>
+				  </div>
+
+
+				  
+				  <script>
+					// Add this script at the end of your body tag or in your existing script section
+					const coverImageDogwaste = document.getElementById("cover-image-dogwaste");
+					const audioContainerDogwaste = document.getElementById("audio-container-dogwaste");
+					const audioDogwaste = document.getElementById("dogwaste-audio");
+					const playIconDogwaste = document.getElementById("play-icon-dogwaste");
+				  
+					coverImageDogwaste.addEventListener("click", () => {
+					  if (audioDogwaste.paused) {
+						audioDogwaste.play();
+						playIconDogwaste.textContent = "❚❚";
+					  } else {
+						audioDogwaste.pause();
+						playIconDogwaste.textContent = "▶";
+					  }
+					});
+				  
+					audioDogwaste.addEventListener("ended", () => {
+					  playIconDogwaste.textContent = "▶";
+					});
+				  </script>
