@@ -164,6 +164,23 @@
 				margin-bottom: 2rem;
 			}
 		}
+		
+		/* Heatmap container style */
+		.heatmap-container {
+			width: 100%;
+			height: 500px;
+			margin: 20px 0;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.heatmap-container iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			padding: 0;
+		}
 	</style>
 </head>
 
@@ -191,11 +208,11 @@
 
 				<div class="box">
 					<article class="media">
-					  <div class="media-left">
-						<figure class="image is-64x64" id="cover-image-dogwaste" 
-						style="position: relative; cursor: pointer; ">
-						  <img src="961744161457_.pic.jpg" alt="Image" />
-						  <div id="play-icon-dogwaste" style="position: absolute; 
+						<div class="media-left">
+							<figure class="image is-64x64" id="cover-image-dogwaste"
+								style="position: relative; cursor: pointer; ">
+								<img src="961744161457_.pic.jpg" alt="Image" />
+								<div id="play-icon-dogwaste" style="position: absolute; 
 									top: 85%; 
 									left: 50%; 
 									transform: translate(-50%, -50%);
@@ -205,52 +222,181 @@
 									border-radius: 50%; 
 									padding: 0.3rem 0.5rem;
 									transition: opacity 0.3s ease;">
-							▶
-						  </div>
-						</figure>
-						<div id="audio-container-dogwaste" style="display: none;">
-						  <audio id="dogwaste-audio">
-							<source src="Tiffany_Dog_Waste.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						  </audio>
+									▶
+								</div>
+							</figure>
+							<div id="audio-container-dogwaste" style="display: none;">
+								<audio id="dogwaste-audio">
+									<source src="Tiffany_Dog_Waste.mp3" type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>
+							</div>
 						</div>
-					  </div>
-						
-					  
-					  <div class="media-content">
-						<div class="content">
-						  <p>
-							<strong>A Proposal to Curb Dog Waste on New York City Streets</strong>
-							<br />
-							<small>By Tiffany Xinran Wang | Columbia Radio News</small>
-							<br />
-							<small>Duration: 03:45</small>
-						  </p>
+
+
+						<div class="media-content">
+							<div class="content">
+								<p>
+									<strong>A Proposal to Curb Dog Waste on New York City Streets</strong>
+									<br />
+									<small>By Tiffany Xinran Wang | Columbia Radio News</small>
+									<br />
+									<small>Duration: 03:45</small>
+								</p>
+							</div>
 						</div>
-					  </div>
 					</article>
-				  </div>
+				</div>
 
 
-				  
-				  <script>
+
+				<script>
 					// Add this script at the end of your body tag or in your existing script section
 					const coverImageDogwaste = document.getElementById("cover-image-dogwaste");
 					const audioContainerDogwaste = document.getElementById("audio-container-dogwaste");
 					const audioDogwaste = document.getElementById("dogwaste-audio");
 					const playIconDogwaste = document.getElementById("play-icon-dogwaste");
-				  
+
 					coverImageDogwaste.addEventListener("click", () => {
-					  if (audioDogwaste.paused) {
-						audioDogwaste.play();
-						playIconDogwaste.textContent = "❚❚";
-					  } else {
-						audioDogwaste.pause();
-						playIconDogwaste.textContent = "▶";
-					  }
+						if (audioDogwaste.paused) {
+							audioDogwaste.play();
+							playIconDogwaste.textContent = "❚❚";
+						} else {
+							audioDogwaste.pause();
+							playIconDogwaste.textContent = "▶";
+						}
 					});
-				  
+
 					audioDogwaste.addEventListener("ended", () => {
-					  playIconDogwaste.textContent = "▶";
+						playIconDogwaste.textContent = "▶";
 					});
-				  </script>
+				</script>
+
+				<p class="subtitle is-6">
+					Upper East Side mom Danielle Avissar has had enough of dog poop. 
+					It sticks onto the wheels of strollers and ends up in her babies' hands when they play with rocks and wood chips in the tree pit.
+				</p>
+
+				<p class="subtitle is-6">
+					Avissar even testified at a City Council hearing last year, but nothing had changed. 
+					Actually, it only got worse.
+				</p>
+
+				<p class="subtitle is-6">
+					There were almost 1,000 complaints from January to March this year. 
+					The numbers didn't look as stark in the same three-month period from previous years.
+				</p>
+
+				<div style="min-height:392px" id="datawrapper-vis-M5RCJ">
+					<script type="text/javascript" defer src="https://datawrapper.dwcdn.net/M5RCJ/embed.js" charset="utf-8" data-target="#datawrapper-vis-M5RCJ"></script>
+					<noscript>
+						<img src="https://datawrapper.dwcdn.net/M5RCJ/full.png" alt="The number of 311 call complaints about dog waste sightings has been rising each year after the pandemic." />
+					</noscript>
+				</div>
+
+				<p class="subtitle is-6">
+
+				</p>
+
+				<p class="subtitle is-6">
+					Avissar said more people became pet owners during the pandemic, 
+					but not all of them could take on the ensuing responsibilities.
+				</p>
+				
+				<p class="subtitle is-6">
+					"If you don't stop (them), people will continue and it gets worse and worse and worse," Avissar said. 
+					"It's a city that actually needs a lot of policing because people just do whatever they want, however they want. It's the wild, wild West in many ways."
+				</p>
+
+				<p class="subtitle is-6">
+					City Council Member Julie Menin <a href="https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=6557702&GUID=F4F4CDAB-3829-4F61-9AAE-DD6CEBE915E0&Options=ID%7CText%7C&Search=int+0281">proposed a bill</a> last May that "would require the Department of Sanitation to install and regularly fill 
+					dog waste bag dispensers on or next to all public litter baskets on city streets." But the bill has stalled.
+				</p>
+
+				<p class="subtitle is-6">
+					Council Member Gale Brewer, a co-sponsor of the bill, said that's because different departments in the city government could not agree on a solution.
+				</p>
+
+				<p class="subtitle is-6">
+					Brewer said she has seen some block associations put up dog waste bags on lampposts or street signs, but neighborhoods have different infrastructures, 
+					making it hard to put down a universal plan into law.
+				</p>
+
+				<p class="subtitle is-6">
+					"The Department of Transportation has not come up with how to do this in a large city," 
+					Brewer said. "That's the problem right there."
+				</p>
+
+				<p class="subtitle is-6">
+					Nonetheless, the city's idea is on the right track. Trash cans and dog waste bags play a big part in keeping the streets clean.
+				</p>
+
+				<p class="subtitle is-6">
+					One of the worst spots for stepping in dog poop is Riverside Drive, between West 158th and 160th Street.
+				</p>
+
+				<p class="subtitle is-6">
+					There were almost 130 complaints about dog waste from this strip of sidewalk alone in the past three months.
+				</p>
+
+				<!-- Heatmap visualization -->
+				<div class="content">
+					<p class="chart-title">Dog Waste Hotspot: Riverside Drive</p>
+					<p class="chart-subtitle">311 dog waste complaints in Manhattan Community Board 12 in the first three months of 2025</p>
+					<div class="heatmap-container">
+						<iframe src="manhattan_cb12_heatmap.html" title="Dog Waste Complaints Heatmap"></iframe>
+					</div>
+				</div>
+
+				<p class="subtitle is-6">
+					Resident Robert Murphy walks his dog Kloth on Riverside Drive and has to deal with the dirty condition every day.
+				</p>
+
+				<p class="subtitle is-6">
+					“Even then I just saw one, they put it in a bag and then they left it on the sidewalk,” Murphy said. 
+					“They couldn't find a garbage can, which is… you know. There are garbage cans all over the place, so it drives me crazy.”
+				</p>
+
+				<p class="subtitle is-6">
+					Another resident Celeste Castilla said there are trash bins at the tip and end of the uphill sidewalk, but not in between. 
+					She said there used to be two more bins, one at West 160th Street and one before West 158th Street.
+				</p>
+
+				<p class="subtitle is-6">
+					“I don't know where those two trash cans disappeared to,” Castilla said, 
+					“but I was always appreciative of them because then I had somewhere else to throw away my trash.”
+				</p>
+
+				<p class="subtitle is-6">
+					Now the trash bins are gone, the city is receiving two to three 311 calls per day from this location.
+				</p>
+
+				<p class="subtitle is-6">
+					New York City’s long-time rival, Boston, always wins the clean streets competition. All over the city, you can see freestanding green stations. 
+					They have a box of bags on the top and a little trash can on the bottom.
+				</p>
+
+				<p class="subtitle is-6">
+					“The neighborhoods that have more dog waste bags provided have way less dog waste on the sidewalks 
+					compared to other parts of the city that don't have that many,” Boston resident Kelli Gossler said.
+				</p>
+
+				<p class="subtitle is-6">
+					Gossler was playing frisbee with her dog, Mika, in Boston Common. 
+					She said the city can alleviate the problem by helping out dog owners.
+				</p>
+
+				<p class="subtitle is-6">
+					“I don't think it's always just bad dog owners,” Gossler said. “I think that it's just circumstantial, 
+					like, if you forget a dog bag sometimes. I will happily pick up after my dog, but every once in a while… I'm not doing it on purpose.”
+				</p>
+
+				
+
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
