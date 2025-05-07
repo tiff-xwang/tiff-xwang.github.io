@@ -2,224 +2,223 @@
 <html>
 
 <head>
-	<title>International Student Policy</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>International Student Policy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
-	<!-- Preconnect to speed up Google Fonts loading -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect to speed up Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<!-- Preload the fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
-		rel="stylesheet">
+    <!-- Preload the fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
 
-	<!-- Fallback in case JavaScript is disabled -->
-	<noscript>
-		<link rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
-	</noscript>
+    <!-- Fallback in case JavaScript is disabled -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
+    </noscript>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-	<style>
-		.content figure {
-			margin-left: 0;
-			margin-right: 0;
-		}
+    <style>
+        .content figure {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-		a {
-			color: #748C5B;
-		}
+        a {
+            color: #748C5B;
+        }
 
-		/* Apply EB Garamond only to main headings */
-		h1,
-		h2,
-		h3 {
-			font-family: 'EB Garamond', serif;
-			font-weight: 700;
-		}
-
-
-		html,
-		body {
-			background-color: #F8F6F2;
-			/* Soft white */
-			color: #3C3C3C;
-			/* Dark gray */
-			padding-top: 1.2em;
-			font-size: 18px;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			text-rendering: optimizeLegibility;
-		}
-
-		p.chart-title {
-			color: #3C3C3C;
-			font-size: 20px;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			font-weight: 700;
-		}
-
-		p.chart-subtitle {
-			color: #3C3C3C;
-			font-size: 15px;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-		}
+        /* Apply EB Garamond only to main headings */
+        h1,
+        h2,
+        h3 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 700;
+        }
 
 
-		.highlight-box {
-			background: #F5F1E6;
-			padding: 30px;
-			border-radius: 12px;
-			margin-top: 60px;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
-		}
+        html,
+        body {
+            background-color: #F8F6F2;
+            /* Soft white */
+            color: #3C3C3C;
+            /* Dark gray */
+            padding-top: 1.2em;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-rendering: optimizeLegibility;
+        }
 
-		iframe,
-		img {
-			padding-top: 1.2em;
-			padding-bottom: 1.2em;
-			max-width: 100%;
-		}
+        p.chart-title {
+            color: #3C3C3C;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+        }
 
-
-		/* margin on mobile */
-		/* Remove margins and padding for small screens */
-		@media (max-width: 640px) {
-
-			body,
-			html {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				overflow-x: hidden;
-				/* Prevents horizontal scrolling */
-			}
-
-			.container {
-				width: 100% !important;
-				max-width: 100% !important;
-				margin: 0 !important;
-				padding: 0 !important;
-			}
-
-			.column {
-				padding: 0 !important;
-			}
-		}
+        p.chart-subtitle {
+            color: #3C3C3C;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
 
 
-		.chart-title,
-		.chart-subtitle {
-			text-align: left;
-			width: 100%;
-			word-wrap: break-word;
-		}
+        .highlight-box {
+            background: #F5F1E6;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+        }
 
-		/* Adjust column responsive behavior */
-		@media (max-width: 768px) {
-			.columns {
-				display: block;
-			}
+        iframe,
+        img {
+            padding-top: 1.2em;
+            padding-bottom: 1.2em;
+            max-width: 100%;
+        }
 
-			.column {
-				width: 100% !important;
-				padding: 10px !important;
-			}
 
-			.is-narrow {
-				width: 100% !important;
-			}
+        /* margin on mobile */
+        /* Remove margins and padding for small screens */
+        @media (max-width: 640px) {
 
-			.chart-title,
-			.chart-subtitle {
-				padding-right: 10px;
-				padding-left: 10px;
-			}
-		}
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+                /* Prevents horizontal scrolling */
+            }
 
-		/* Add to your existing CSS */
-		#g-template-box {
-			width: 100%;
-			max-width: 100%;
-		}
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
 
-		.column.is-two-thirds #g-template-full {
-			width: 100% !important;
-			height: auto !important;
-		}
+            .column {
+                padding: 0 !important;
+            }
+        }
 
-		@media (max-width: 768px) {
-			.columns {
-				display: flex;
-				flex-direction: column;
-			}
 
-			.column.is-two-thirds,
-			.column.is-one-third {
-				width: 100% !important;
-			}
+        .chart-title,
+        .chart-subtitle {
+            text-align: left;
+            width: 100%;
+            word-wrap: break-word;
+        }
 
-			#g-template-box {
-				margin-bottom: 2rem;
-			}
-		}
+        /* Adjust column responsive behavior */
+        @media (max-width: 768px) {
+            .columns {
+                display: block;
+            }
 
-		/* Heatmap container style */
-		.heatmap-container {
-			width: 100%;
-			height: 500px;
-			margin: 20px 0;
-			border-radius: 8px;
-			overflow: hidden;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-		}
+            .column {
+                width: 100% !important;
+                padding: 10px !important;
+            }
 
-		.heatmap-container iframe {
-			width: 100%;
-			height: 100%;
-			border: none;
-			padding: 0;
-		}
-	</style>
-	<link href="scrolly-styles.css" rel="stylesheet">
-	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+            .is-narrow {
+                width: 100% !important;
+            }
+
+            .chart-title,
+            .chart-subtitle {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+
+        /* Add to your existing CSS */
+        #g-template-box {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .column.is-two-thirds #g-template-full {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            .columns {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column.is-two-thirds,
+            .column.is-one-third {
+                width: 100% !important;
+            }
+
+            #g-template-box {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Heatmap container style */
+        .heatmap-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heatmap-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0;
+        }
+    </style>
+    <link href="scrolly-styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
 </head>
 
 <body>
 
-	<div class="container">
-		<div class="columns is-mobile is-multiline is-centered">
-			<div class="column is-two-thirds">
-			
-				<h1 class="title is-1">After SEVIS and visa terminations, international students
-                    are looking to ditch the U.S. as their future destination
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <h1 class="title is-1">After SEVIS and visa terminations, international students lose trust in a future in the U.S.
                 </h1>
-				<h2 class="byline title is-5">By
-					<a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
-				</h2>
-				<div class="is-flex is-align-items-center mb-5">
-					<h2 class="date title is-6 mb-0 mr-4">May 4, 2025</h2>
-					<button class="button is-small">
-						<a href="https://github.com/tiff-xwang/International-Student-Policy.git">
-							<span class="icon is-small">
-								<i class="fab fa-github"></i>
-							</span>
-							<span>Read my code</span>
-						</a>
-					</button>
-				</div>
+                <h2 class="byline title is-5">By
+                    <a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
+                </h2>
+                <div class="is-flex is-align-items-center mb-5">
+                    <h2 class="date title is-6 mb-0 mr-4">May 4, 2025</h2>
+                    <button class="button is-small">
+                        <a href="https://github.com/tiff-xwang/International-Student-Policy.git">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Read my code</span>
+                        </a>
+                    </button>
+                </div>
 
 
-				<div class="box">
-					<article class="media">
-						<div class="media-left">
-							<figure class="image is-64x64" id="cover-image-dogwaste"
-								style="position: relative; cursor: pointer; ">
-								<img src="961744161457_.pic.jpg" alt="Image" />
-								<div id="play-icon-dogwaste" style="position: absolute; 
+                <div class="box">
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64" id="cover-image-dogwaste"
+                                style="position: relative; cursor: pointer; ">
+                                <img src="961744161457_.pic.jpg" alt="Image" />
+                                <div id="play-icon-dogwaste" style="position: absolute; 
 									top: 85%; 
 									left: 50%; 
 									transform: translate(-50%, -50%);
@@ -229,115 +228,446 @@
 									border-radius: 50%; 
 									padding: 0.3rem 0.5rem;
 									transition: opacity 0.3s ease;">
-									▶
-								</div>
-							</figure>
-							<div id="audio-container-dogwaste" style="display: none;">
-								<audio id="dogwaste-audio">
-									<source src="Tiffany_Dog_Waste.mp3" type="audio/mpeg">
-									Your browser does not support the audio element.
-								</audio>
-							</div>
-						</div>
+                                    ▶
+                                </div>
+                            </figure>
+                            <div id="audio-container-dogwaste" style="display: none;">
+                                <audio id="dogwaste-audio">
+                                    <source src="Tiffany_Dog_Waste.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
 
 
-						<div class="media-content">
-							<div class="content">
-								<p>
-									<strong>tktk</strong>
-									<br />
-									<small>By Tiffany Xinran Wang | Columbia Radio News</small>
-									<br />
-									<small>Duration: tktk</small>
-								</p>
-							</div>
-						</div>
-					</article>
-				</div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>tktk</strong>
+                                    <br />
+                                    <small>By Tiffany Xinran Wang | Columbia Radio News</small>
+                                    <br />
+                                    <small>Duration: tktk</small>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
 
 
-				<script>
-					// Add this script at the end of your body tag or in your existing script section
-					const coverImageDogwaste = document.getElementById("cover-image-dogwaste");
-					const audioContainerDogwaste = document.getElementById("audio-container-dogwaste");
-					const audioDogwaste = document.getElementById("dogwaste-audio");
-					const playIconDogwaste = document.getElementById("play-icon-dogwaste");
+                <script>
+                    // Add this script at the end of your body tag or in your existing script section
+                    const coverImageDogwaste = document.getElementById("cover-image-dogwaste");
+                    const audioContainerDogwaste = document.getElementById("audio-container-dogwaste");
+                    const audioDogwaste = document.getElementById("dogwaste-audio");
+                    const playIconDogwaste = document.getElementById("play-icon-dogwaste");
 
-					coverImageDogwaste.addEventListener("click", () => {
-						if (audioDogwaste.paused) {
-							audioDogwaste.play();
-							playIconDogwaste.textContent = "❚❚";
-						} else {
-							audioDogwaste.pause();
-							playIconDogwaste.textContent = "▶";
-						}
-					});
+                    coverImageDogwaste.addEventListener("click", () => {
+                        if (audioDogwaste.paused) {
+                            audioDogwaste.play();
+                            playIconDogwaste.textContent = "❚❚";
+                        } else {
+                            audioDogwaste.pause();
+                            playIconDogwaste.textContent = "▶";
+                        }
+                    });
 
-					audioDogwaste.addEventListener("ended", () => {
-						playIconDogwaste.textContent = "▶";
-					});
-				</script>
-
-				<p class="subtitle is-6">
-					A graduate student from Turkey was going through his second semester when he received a too-bad-to-be-true notice from his school in Delaware on March 22. 
-                    For the following month, he missed multiple exams, stayed up until daylight, kept the news to himself and lived in limbo.
-				</p>
-
-				<p class="subtitle is-6">
-					Thousands of international students’ SEVIS records were abruptly terminated and then restored last month. 
-                    It seems like the government walked back their mistake and all is fine, but students say otherwise.
-				</p>
-
-				<p class="subtitle is-6">
-					The disillusionment and paranoia many international students experienced, including those unaffected, have lingered on. 
-                    Current students are looking for a way out, and future students are shifting their eyes to other countries.
-				</p>
+                    audioDogwaste.addEventListener("ended", () => {
+                        playIconDogwaste.textContent = "▶";
+                    });
+                </script>
 
                 <p class="subtitle is-6">
-                    “You can have a battalion of judges telling you that you are rightfully here to stay, but if the people’s minds don’t change, you’re not gonna have a good time,” said the Turkish student in Delaware, 
+                    A graduate student from Turkey was going through his second semester when he received a
+                    too-bad-to-be-true notice from his school in Delaware on March 22.
+                    For the following month, he missed multiple exams, stayed up until daylight, kept the news to
+                    himself and lived in limbo.
+                </p>
+
+                <p class="subtitle is-6">
+                    Thousands of international students’ SEVIS records were abruptly terminated and then restored last
+                    month.
+                    It seems like the government walked back their mistake and all is fine, but students say otherwise.
+                </p>
+
+                <p class="subtitle is-6">
+                    The disillusionment and paranoia many international students experienced, including those
+                    unaffected, have lingered on.
+                    Current students are looking for a way out, and future students are shifting their eyes to other
+                    countries.
+                </p>
+
+                <p class="subtitle is-6">
+                    “You can have a battalion of judges telling you that you are rightfully here to stay, but if the
+                    people’s minds don’t change, you’re not gonna have a good time,” said the Turkish student in
+                    Delaware,
                     who asked to be identified by his Discord username, heavygrin.
                 </p>
 
                 <p class="subtitle is-6">
-                    His student status was reinstated on April 27, but his visa revocation was irreversible.
+                    Heavygin’s student status was reinstated on April 27, but his visa was not. The only way to obtain a
+                    valid visa is to leave the country to apply for a new one, a risky move given his revocation record.
                 </p>
 
                 <p class="subtitle is-6">
-                    Since a revoked visa cannot be given back, the only way to obtain a new visa is to leave the country to apply for a new one in an overseas consulate, 
-                    likely a rough and risky journey.
+                    Many students whose SEVIS was restored are finding themselves in this dilemma. They are afraid that
+                    a revoked visa might become the basis for SEVIS re-termination, or even deportation.
                 </p>
 
-				<div style="min-height:392px" id="datawrapper-vis-M5RCJ">
-					<script type="text/javascript" defer src="https://datawrapper.dwcdn.net/M5RCJ/embed.js"
-						charset="utf-8" data-target="#datawrapper-vis-M5RCJ"></script>
-					<noscript>
-						<img src="https://datawrapper.dwcdn.net/M5RCJ/full.png"
-							alt="The number of 311 call complaints about dog waste sightings has been rising each year after the pandemic." />
-					</noscript>
-				</div>
+                <p class="subtitle is-6">
+                    According to a survey sent out to the Discord server, “F-1 SEVIS TERMINATIONS,” by an Indian PhD
+                    student, Vladimir, around 80% of the students who answered to the question “How anxious are you
+                    feeling” felt extremely anxious.
+                </p>
 
-				<p class="subtitle is-6">
+                <p class="subtitle is-6">
+                    And almost 80% of those feeling anxious on levels 8 to 10 were not even directly impacted.
+                </p>
 
-				</p>
+                <p class="chart-title">How anxious do you feel about the latest developments associated with immigration enforcement in the U.S.?</p>
+			    <p class="chart-subtitle">On anxiety level 1 to 10, most survey participants answered higher numbers on the scale.</p>
 
-				<p class="subtitle is-6">
-					Avissar said more people became pet owners during the pandemic,
-					but not all of them could take on the ensuing responsibilities.
-				</p>
+                <!-- Generated by ai2html v0.121.1 - 2025-05-06 22:26 -->
+                <!-- ai file: template.ai -->
+                <style media="screen,print">
+                    #g-template-box,
+                    #g-template-box .g-artboard {
+                        margin: 0 auto;
+                    }
 
-				<p class="subtitle is-6">
-					"If you don't stop (them), people will continue and it gets worse and worse and worse," Avissar
-					said.
-					"It's a city that actually needs a lot of policing because people just do whatever they want,
-					however they want. It's the wild, wild West in many ways."
-				</p>
-			</div>
-		</div>
-	</div>
+                    #g-template-box p {
+                        margin: 0;
+                    }
+
+                    #g-template-box .g-aiAbs {
+                        position: absolute;
+                    }
+
+                    #g-template-box .g-aiImg {
+                        position: absolute;
+                        top: 0;
+                        display: block;
+                        width: 100% !important;
+                    }
+
+                    #g-template-box .g-aiSymbol {
+                        position: absolute;
+                        box-sizing: border-box;
+                    }
+
+                    #g-template-box .g-aiPointText p {
+                        white-space: nowrap;
+                    }
+
+                    #g-template-full {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-template-full p {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-weight: regular;
+                        line-height: 22px;
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        font-size: 18px;
+                        text-align: left;
+                        color: rgb(242, 242, 242);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-template-full .g-pstyle0 {
+                        font-weight: normal;
+                    }
+
+                    #g-template-mobile {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-template-mobile p {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-weight: regular;
+                        line-height: 15px;
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        font-size: 13px;
+                        text-align: left;
+                        color: rgb(242, 242, 242);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-template-mobile .g-pstyle0 {
+                        font-weight: normal;
+                    }
+
+                    #g-template-mobile .g-pstyle1 {
+                        font-weight: normal;
+                        line-height: 13px;
+                        height: 13px;
+                        font-size: 11px;
+                        color: rgb(0, 0, 0);
+                    }
+                </style>
+
+                <div id="g-template-box" class="ai2html ai2html-responsive">
+
+                    <!-- Artboard: full -->
+                    <div id="g-template-full" class="g-artboard" style="width:700px; height:425px;"
+                        data-aspect-ratio="1.647" data-min-width="700">
+                        <div style=""></div>
+                        <img id="g-template-full-img" class="g-template-full-img g-aiImg" alt=""
+                            src="template-full.png" />
+                        <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs"
+                            style="top:6.5882%;left:75.7664%;width:9.7143%;">
+                            <p class="g-pstyle0">7</p>
+                        </div>
+                        <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs"
+                            style="top:6.8235%;left:64.0491%;width:1.4286%;">
+                            <p class="g-pstyle0">5</p>
+                        </div>
+                        <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs"
+                            style="top:6.8235%;left:14.2507%;width:31.8571%;">
+                            <p class="g-pstyle0">Level 10</p>
+                            <p class="g-pstyle0">extremely anxious</p>
+                        </div>
+                        <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs"
+                            style="top:21.1765%;left:64.8947%;width:31.8571%;">
+                            <p class="g-pstyle0">Level 9</p>
+                            <p class="g-pstyle0">very anxious</p>
+                        </div>
+                        <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs"
+                            style="top:66.1176%;left:63.6205%;width:31.8571%;">
+                            <p class="g-pstyle0">Level 8</p>
+                            <p class="g-pstyle0">anxious</p>
+                        </div>
+                        <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs"
+                            style="top:66.1176%;left:83.3886%;width:9.7143%;">
+                            <p class="g-pstyle0">6</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: mobile -->
+                    <div id="g-template-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px"
+                        data-aspect-ratio="0.797" data-min-width="0" data-max-width="699">
+                        <div style="padding: 0 0 125.5467% 0;"></div>
+                        <img id="g-template-mobile-img" class="g-template-mobile-img g-aiImg" alt=""
+                            src="template-mobile.png" />
+                        <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs"
+                            style="top:19.5412%;left:83.7344%;width:12.8%;">
+                            <p class="g-pstyle0">7</p>
+                        </div>
+                        <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs"
+                            style="top:19.5412%;left:68.4244%;width:1.8667%;">
+                            <p class="g-pstyle0">5</p>
+                        </div>
+                        <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs"
+                            style="top:19.7536%;left:3.3573%;width:41.6%;">
+                            <p class="g-pstyle0">Level 10</p>
+                            <p class="g-pstyle0">extremely anxious</p>
+                        </div>
+                        <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs"
+                            style="top:28.6746%;left:69.5293%;width:41.6%;">
+                            <p class="g-pstyle0">Level 9</p>
+                            <p class="g-pstyle0">very anxious</p>
+                        </div>
+                        <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs"
+                            style="top:56.9244%;left:67.8644%;width:41.6%;">
+                            <p class="g-pstyle0">Level 8</p>
+                            <p class="g-pstyle0">anxious</p>
+                        </div>
+                        <div id="g-ai1-6" class="g-ai2html-settings g-aiAbs"
+                            style="top:57.1368%;left:93.6936%;width:12.8%;">
+                            <p class="g-pstyle0">6</p>
+                        </div>
+                        <div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText"
+                            style="top:65.3011%;margin-top:-7.4px;left:6.9516%;width:97px;">
+                            <p class="g-pstyle1">mobile (375px)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script type="text/javascript">
+                    (function (containerId, opts) {
+                        var nameSpace = opts.namespace || '';
+                        var containers = findContainers(containerId);
+                        containers.forEach(resize);
+
+                        function resize(container) {
+                            var onResize = throttle(update, 200);
+                            var waiting = !!window.IntersectionObserver;
+                            var observer;
+                            update();
+
+                            document.addEventListener('DOMContentLoaded', update);
+                            window.addEventListener('resize', onResize);
+
+                            // NYT Scoop-specific code
+                            if (opts.setup) {
+                                opts.setup(container).on('cleanup', cleanup);
+                            }
+
+                            function cleanup() {
+                                document.removeEventListener('DOMContentLoaded', update);
+                                window.removeEventListener('resize', onResize);
+                                if (observer) observer.disconnect();
+                            }
+
+                            function update() {
+                                var artboards = selectChildren('.' + nameSpace + 'artboard[data-min-width]', container),
+                                    width = Math.round(container.getBoundingClientRect().width);
+
+                                // Set artboard visibility based on container width
+                                artboards.forEach(function (el) {
+                                    var minwidth = el.getAttribute('data-min-width'),
+                                        maxwidth = el.getAttribute('data-max-width');
+                                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                                        if (!waiting) {
+                                            selectChildren('.' + nameSpace + 'aiImg', el).forEach(updateImgSrc);
+                                            selectChildren('video', el).forEach(updateVideoSrc);
+                                        }
+                                        el.style.display = 'block';
+                                    } else {
+                                        el.style.display = 'none';
+                                    }
+                                });
+
+                                // Initialize lazy loading on first call
+                                if (waiting && !observer) {
+                                    if (elementInView(container)) {
+                                        waiting = false;
+                                        update();
+                                    } else {
+                                        observer = new IntersectionObserver(onIntersectionChange, { rootMargin: "800px" });
+                                        observer.observe(container);
+                                    }
+                                }
+                            }
+
+                            function onIntersectionChange(entries) {
+                                // There may be multiple entries relating to the same container
+                                // (captured at different times)
+                                var isIntersecting = entries.reduce(function (memo, entry) {
+                                    return memo || entry.isIntersecting;
+                                }, false);
+                                if (isIntersecting) {
+                                    waiting = false;
+                                    // update: don't remove -- we need the observer to trigger an update
+                                    // when a hidden map becomes visible after user interaction
+                                    // (e.g. when an accordion menu or tab opens)
+                                    // observer.disconnect();
+                                    // observer = null;
+                                    update();
+                                }
+                            }
+                        }
+
+                        function findContainers(id) {
+                            // support duplicate ids on the page
+                            return selectChildren('.ai2html-responsive', document).filter(function (el) {
+                                if (el.getAttribute('id') != id) return false;
+                                if (el.classList.contains('ai2html-resizer')) return false;
+                                el.classList.add('ai2html-resizer');
+                                return true;
+                            });
+                        }
+
+                        // Replace blank placeholder image with actual image
+                        function updateImgSrc(img) {
+                            var src = img.getAttribute('data-src');
+                            if (src && img.getAttribute('src') != src) {
+                                img.setAttribute('src', src);
+                            }
+                        }
+
+                        function updateVideoSrc(el) {
+                            var src = el.getAttribute('data-src');
+                            if (src && !el.hasAttribute('src')) {
+                                el.setAttribute('src', src);
+                            }
+                        }
+
+                        function elementInView(el) {
+                            var bounds = el.getBoundingClientRect();
+                            return bounds.top < window.innerHeight && bounds.bottom > 0;
+                        }
+
+                        function selectChildren(selector, parent) {
+                            return parent ? Array.prototype.slice.call(parent.querySelectorAll(selector)) : [];
+                        }
+
+                        // based on underscore.js
+                        function throttle(func, wait) {
+                            var timeout = null, previous = 0;
+                            function run() {
+                                previous = Date.now();
+                                timeout = null;
+                                func();
+                            }
+                            return function () {
+                                var remaining = wait - (Date.now() - previous);
+                                if (remaining <= 0 || remaining > wait) {
+                                    clearTimeout(timeout);
+                                    run();
+                                } else if (!timeout) {
+                                    timeout = setTimeout(run, remaining);
+                                }
+                            };
+                        }
+                    })("g-template-box", { namespace: "g-", setup: window.setupInteractive || window.getComponent });
+                </script>
+                <!-- End ai2html - 2025-05-06 22:26 -->
 
 
-	
+                <p class="subtitle is-6">
+                    “ I just immediately felt like all my motivation just suddenly washed away,” heavygrin said. Between his student status termination and restoration, he missed several exams and could not do anything aside from scrolling through his phone for news updates.
+                </p>
+
+                <p class="subtitle is-6">
+                    Heavygrin said he left his software development career and his newly married wife in Turkey last year to pursue his real passion, cybersecurity, in the U.S.
+                </p>
+
+                <p class="subtitle is-6">
+                    “Back home, there was not much opportunity to study cybersecurity,” said heavygrin. “My first instinct was to go to America because for studying technology, I don’t think it can get better than that.”
+                </p>
+
+                <p class="subtitle is-6">
+                    But now, he cannot decide whether he should take his credits from the Delaware school and transfer to another country, or finish up his degree with a GPA lower than he could have maintained.
+                </p>
+
+                <p class="subtitle is-6">
+                    A Korean student studying in Iowa, who was also affected by SEVIS termination, echoed that state of confusion. 
+                </p>
+
+                <p class="subtitle is-6">
+                    “For the last few weeks, I couldn't focus on school at all,” said the Korean student, who asked to stay anonymous in fear of bringing trouble to his professors who allowed him to take classes when his status and visa were revoked. “All I could do was to read every single court docket I can find online and prepare to sue.”
+                </p>
+
+                <div style="min-height:448px" id="datawrapper-vis-gNAO2"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/gNAO2/embed.js" charset="utf-8" data-target="#datawrapper-vis-gNAO2"></script>
+                    <noscript><img src="https://datawrapper.dwcdn.net/gNAO2/full.png" alt="Most survey participants found it hard to find a lawyer." />
+                    </noscript>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
