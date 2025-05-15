@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f6f2" rx="10" ry="10" />
+  
+  <!-- Passport Base -->
+  <rect x="100" y="70" width="200" height="140" rx="5" ry="5" fill="#003366" />
+  <rect x="110" y="80" width="180" height="120" rx="3" ry="3" fill="#f0f0f0" />
+  
+  <!-- Passport Stripes -->
+  <rect x="120" y="95" width="160" height="10" fill="#e0e0e0" />
+  <rect x="120" y="115" width="160" height="10" fill="#e0e0e0" />
+  <rect x="120" y="135" width="160" height="10" fill="#e0e0e0" />
+  <rect x="120" y="155" width="160" height="10" fill="#e0e0e0" />
+  <rect x="120" y="175" width="160" height="10" fill="#e0e0e0" />
+  
+  <!-- SEVIS Symbol -->
+  <circle cx="155" cy="135" r="25" fill="#748c5b" />
+  <text x="155" y="143" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">S</text>
+  
+  <!-- Red X Mark -->
+  <g transform="translate(250, 135) rotate(45)">
+    <rect x="-25" y="-5" width="50" height="10" fill="#b71c1c" />
+    <rect x="-5" y="-25" width="10" height="50" fill="#b71c1c" />
+  </g>
+  
+  <!-- Text Elements -->
+  <text x="200" y="50" font-family="'EB Garamond', serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#3c3c3c">SEVIS Termination</text>
+  <text x="200" y="230" font-family="Georgia, serif" font-size="14" text-anchor="middle" fill="#3c3c3c">International Student Status</text>
+  <text x="200" y="250" font-family="Georgia, serif" font-size="14" text-anchor="middle" fill="#3c3c3c">April 2025</text>
+  
+  <!-- Dotted Line Representing Break -->
+  <line x1="100" y1="210" x2="300" y2="210" stroke="#748c5b" stroke-width="2" stroke-dasharray="5,3" />
+</svg>
