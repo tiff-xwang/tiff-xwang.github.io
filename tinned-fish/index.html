@@ -4,6 +4,24 @@
 <head>
     <title>Tinned Fish</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- Preconnect to speed up Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Fallback in case JavaScript is disabled -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         .content figure {
             margin-left: 0;
@@ -11,51 +29,280 @@
         }
 
         a {
-            color: #748C5B
+            color: #748C5B;
         }
 
+        /* Apply EB Garamond only to main headings */
+        h1,
+        h2,
+        h3 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 700;
+        }
+
+
+        html,
         body {
-            background-color: #FDFBF6;
+            background-color: #F8F6F2;
+            /* Soft white */
+            color: #3C3C3C;
+            /* Dark gray */
+            padding-top: 1.2em;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        p.chart-title {
+            color: #3C3C3C;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            margin-bottom: 0.25rem; 
+            padding-bottom: 0;
+        }
+
+        p.chart-subtitle {
+            color: #3C3C3C;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 0.75rem; 
+            padding-bottom: 0;
+        }
+
+
+        .highlight-box {
+            background: #F5F1E6;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+        }
+
+        iframe,
+        img {
+            padding-top: 1.2em;
+            padding-bottom: 1.2em;
+            max-width: 100%;
+        }
+
+
+        /* margin on mobile */
+        /* Remove margins and padding for small screens */
+        @media (max-width: 640px) {
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+                /* Prevents horizontal scrolling */
+            }
+
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-top: -1rem;
+            }
+
+            .column {
+                padding: 0 !important;
+            }
+        }
+
+
+        .chart-title,
+        .chart-subtitle {
+            text-align: left;
+            width: 100%;
+            word-wrap: break-word;
+        }
+
+        /* Adjust column responsive behavior */
+        @media (max-width: 768px) {
+            .columns {
+                display: block;
+            }
+
+            .column {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+
+            .is-narrow {
+                width: 100% !important;
+            }
+
+            .chart-title,
+            .chart-subtitle {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+
+        /* Add to your existing CSS */
+        #g-template-box {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .column.is-two-thirds #g-template-full {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            .columns {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column.is-two-thirds,
+            .column.is-one-third {
+                width: 100% !important;
+            }
+
+            #g-template-box {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Heatmap container style */
+        .heatmap-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heatmap-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0;
         }
     </style>
+    <link href="scrolly-styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
 </head>
 
 <body>
+
     <div class="container">
-        <h1 class="title is-1 mt-5">Which Country's Tinned Fish Is Worth</h1>
-        <p class="subtitle is-4">By Tiffany Xinran Wang</p>
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
 
-        <div style="min-height:245px" id="datawrapper-vis-8wH2N">
-            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/8wH2N/embed.js" charset="utf-8"
-                data-target="#datawrapper-vis-8wH2N"></script><noscript><img
-                    src="https://datawrapper.dwcdn.net/8wH2N/full.png"
-                    alt="Tinned sardine from Portugal is the cheapest and has the largest portion." /></noscript>
-        </div>
-
-
-        <div style="min-height:159px" id="datawrapper-vis-L7ZmR">
-            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/L7ZmR/embed.js" charset="utf-8"
-                data-target="#datawrapper-vis-L7ZmR"></script><noscript><img
-                    src="https://datawrapper.dwcdn.net/L7ZmR/full.png"
-                    alt="Italy has the second cheapest tuna and largest portion." /></noscript>
-        </div>
-
-
-        <div style="min-height:173px" id="datawrapper-vis-YuzpD">
-            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/YuzpD/embed.js" charset="utf-8"
-                data-target="#datawrapper-vis-YuzpD"></script><noscript><img
-                    src="https://datawrapper.dwcdn.net/YuzpD/full.png"
-                    alt="French mackerel has larger portion for a cheaper price." /></noscript>
-        </div>
+                <h1 class="title is-1">Which Country's Tinned Fish Is Worth the Price
+                </h1>
+                <h2 class="byline title is-5">By
+                    <a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
+                </h2>
+                <div class="is-flex is-align-items-center mb-5">
+                    <h2 class="date title is-6 mb-0 mr-4">May 15, 2025</h2>
+                    <button class="button is-small">
+                        <a href="https://github.com/tiff-xwang/Tinned-Fish.git">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Read my code</span>
+                        </a>
+                    </button>
+                </div>
 
 
-        <div style="min-height:173px" id="datawrapper-vis-TIMQA">
-            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/TIMQA/embed.js" charset="utf-8"
-                data-target="#datawrapper-vis-TIMQA"></script><noscript><img
-                    src="https://datawrapper.dwcdn.net/TIMQA/full.png"
-                    alt="Italian anchovy is half the price of Spain's!" /></noscript>
+                <p class="subtitle is-6">
+                    Rainbow Tomatoes Garden’s <a href="https://rtg.fish/">online shop</a> is touted as the world’s largest collection of tinned fish and seafood, 
+                    with over 800 products from 27 countries.
+                </p>
+
+                <p class="subtitle is-6">
+                    The sheer volume of tinned products can be overwhelming when shoppers face a whole shelf of them, 
+                    trying to pick a tin for their tuna pasta or sardine salad. That’s when RTG’s large collection comes in handy.
+                </p>
+
+                <p class="subtitle is-6">
+                    Shop owner Dan Waber compiled the details of every tin into a <a href="https://docs.google.com/spreadsheets/d/1zjfwXVsGPfWw4ag3EHkT6ismDZhj8dlFwwahD7SG7gQ/edit?usp=sharing">dataset</a>, 
+                    which offers insights into what type of tinned fish from which country would give shoppers the biggest bang for their buck.
+                </p>
+
+                <p class="subtitle is-6">
+                    The top three winners are mackerels from France, sardines from Portugal and tuna from Italy.
+                </p>
+
+                <div style="min-height:400px" id="datawrapper-vis-KabMn"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/KabMn/embed.js" charset="utf-8" data-target="#datawrapper-vis-KabMn"></script>
+                    <noscript><img src="https://datawrapper.dwcdn.net/KabMn/full.png" alt="Different kinds of tinned fish by price and size, with Portuguese sardine being the most economic option." />
+                    </noscript>
+                </div>
+
+                <p class="subtitle is-6">
+
+                </p>
+
+                <p class="subtitle is-6">
+                    French mackerel, Portuguese sardine and Italian tuna have the cheapest unit price.
+                </p>
+
+                <p class="subtitle is-6">
+                    Some of RTG’s French mackerel offerings include Groix & Nature’s Mackerel Rillettes with Sichuan Pepper and 
+                    Les Mouettes d’Arvor’s Mackerel Fillets in Escabeche.
+                </p>
+
+                <p class="subtitle is-6">
+                    RTG’s sardine collection from Portugal has gourmet flavors, including Sardinha’s Sardines in Spicy Olive Oil with Smoke Aroma 
+                    and Berthe’s Sardines in Olive Oil with Truffle Flavoring.
+                </p>
+
+                <p class="subtitle is-6">
+                    Italian tuna includes AS do MAR’s Solid Light Yellowfin Tuna in Olive Oil and Angelo Parodi’s Yellowfin Ventresca in Olive Oil.
+                </p>
+
+                <p class="subtitle is-6">
+                    If trying out exotic countries’ tinned products is a priority, these countries’ tins are rare sightings that are worth buying.
+                </p>
+
+
+
+
+                <div style="min-height:400px" id="datawrapper-vis-SNd92"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/SNd92/embed.js" charset="utf-8" data-target="#datawrapper-vis-SNd92"></script>
+                    <noscript><img src="https://datawrapper.dwcdn.net/SNd92/full.png" alt="A list of tinned seafood origins that are uncommon" />
+                    </noscript>
+                </div>
+
+
+                <p class="subtitle is-6">
+                    
+                </p>
+
+                <p class="subtitle is-6">
+                    The global tinned fish market is projected to grow by almost 6% annually, from a value of $10 billion 
+                    in 2024 to $18 billion in 2034, according to <a href="https://www.factmr.com/report/tinned-fish-market">a study by Fact.MR</a>, a research company.
+                </p>
+
+                <p class="subtitle is-6">
+                    Fact.MR's report says consumers are turning to tinned fish for its long-lasting shelf life and rich nutrients.
+                </p>
+
+                <p class="subtitle is-6">
+                    For those looking for a fine taste instead of inexpensiveness, tinned fish from France and Spain will generally 
+                    be good choices because they use extra virgin olive oil much more than products from other countries.
+                </p>
+
+
+                
+            </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
