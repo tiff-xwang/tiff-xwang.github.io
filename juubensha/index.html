@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Juubensha</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+	<!-- Preconnect to speed up Google Fonts loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Preload the fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+		rel="stylesheet">
+
+	<!-- Fallback in case JavaScript is disabled -->
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
+	</noscript>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style>
+		.content figure {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		a {
+			color: #748C5B;
+		}
+
+		/* Apply EB Garamond only to main headings */
+		h1,
+		h2,
+		h3 {
+			font-family: 'EB Garamond', serif;
+			font-weight: 700;
+		}
+
+
+		html,
+		body {
+			background-color: #F8F6F2;
+			/* Soft white */
+			color: #3C3C3C;
+			/* Dark gray */
+			padding-top: 1.2em;
+			font-size: 18px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			text-rendering: optimizeLegibility;
+		}
+
+		p.chart-title {
+			color: #3C3C3C;
+			font-size: 20px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-weight: 700;
+		}
+
+		p.chart-subtitle {
+			color: #3C3C3C;
+			font-size: 15px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+
+
+		.highlight-box {
+			background: #F5F1E6;
+			padding: 30px;
+			border-radius: 12px;
+			margin-top: 60px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+		}
+
+		iframe,
+		img {
+			padding-top: 1.2em;
+			padding-bottom: 1.2em;
+			max-width: 100%;
+		}
+
+
+		/* margin on mobile */
+		/* Remove margins and padding for small screens */
+		@media (max-width: 640px) {
+
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				overflow-x: hidden;
+				/* Prevents horizontal scrolling */
+			}
+
+			.container {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+
+			.column {
+				padding: 0 !important;
+			}
+		}
+
+
+		.chart-title,
+		.chart-subtitle {
+			text-align: left;
+			width: 100%;
+			word-wrap: break-word;
+		}
+
+		/* Adjust column responsive behavior */
+		@media (max-width: 768px) {
+			.columns {
+				display: block;
+			}
+
+			.column {
+				width: 100% !important;
+				padding: 10px !important;
+			}
+
+			.is-narrow {
+				width: 100% !important;
+			}
+
+			.chart-title,
+			.chart-subtitle {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+		}
+
+		/* Add to your existing CSS */
+		#g-template-box {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.column.is-two-thirds #g-template-full {
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		@media (max-width: 768px) {
+			.columns {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.column.is-two-thirds,
+			.column.is-one-third {
+				width: 100% !important;
+			}
+
+			#g-template-box {
+				margin-bottom: 2rem;
+			}
+		}
+
+		/* Heatmap container style */
+		.heatmap-container {
+			width: 100%;
+			height: 500px;
+			margin: 20px 0;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.heatmap-container iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			padding: 0;
+		}
+	</style>
+	<link href="scrolly-styles.css" rel="stylesheet">
+	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="columns is-mobile is-multiline is-centered">
+			<div class="column is-two-thirds">
+			
+				<h1 class="title is-1">Juubensha: Live-Action Script Games Invigorate New York City</h1>
+				<h2 class="byline title is-5">By
+					<a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
+				</h2>
+				<div class="is-flex is-align-items-center mb-5">
+					<h2 class="date title is-6 mb-0 mr-4">February 24, 2025</h2>
+					
+				</div>
+
+
+				<div class="box">
+					<article class="media">
+						<div class="media-left">
+							<figure class="image is-64x64" id="cover-image-dogwaste"
+								style="position: relative; cursor: pointer; ">
+								<img src="Juubensha.jpg" alt="Image" />
+								<div id="play-icon-dogwaste" style="position: absolute; 
+									top: 85%; 
+									left: 50%; 
+									transform: translate(-50%, -50%);
+									font-size: 1rem; 
+									color: white; 
+									background: rgba(0, 0, 0, 0.4); 
+									border-radius: 50%; 
+									padding: 0.3rem 0.5rem;
+									transition: opacity 0.3s ease;">
+									▶
+								</div>
+							</figure>
+							<div id="audio-container-dogwaste" style="display: none;">
+								<audio id="dogwaste-audio">
+									<source src="Juubensha.mp3" type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>
+							</div>
+						</div>
+
+
+						<div class="media-content">
+							<div class="content">
+								<p>
+									<strong>Live-Action Script Game 剧本杀</strong>
+									<br />
+									<small>By Tiffany Xinran Wang | Columbia Radio News</small>
+									<br />
+									<small>Duration: 04:11</small>
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+
+
+
+				<script>
+					// Add this script at the end of your body tag or in your existing script section
+					const coverImageDogwaste = document.getElementById("cover-image-dogwaste");
+					const audioContainerDogwaste = document.getElementById("audio-container-dogwaste");
+					const audioDogwaste = document.getElementById("dogwaste-audio");
+					const playIconDogwaste = document.getElementById("play-icon-dogwaste");
+
+					coverImageDogwaste.addEventListener("click", () => {
+						if (audioDogwaste.paused) {
+							audioDogwaste.play();
+							playIconDogwaste.textContent = "❚❚";
+						} else {
+							audioDogwaste.pause();
+							playIconDogwaste.textContent = "▶";
+						}
+					});
+
+					audioDogwaste.addEventListener("ended", () => {
+						playIconDogwaste.textContent = "▶";
+					});
+				</script>
+
+				<p class="subtitle is-6">
+					Tiffany: In New York City, friends and friends-to-bes are gathering to play a new kind of role-playing game. 
+				</p>
+
+				<p class="subtitle is-6">
+					In Chinese, it's called <i>juubensha</i>. And it's a chance for people to become strange characters and play out dramatic scenes with each other. 
+				</p>
+
+				<p class="subtitle is-6">
+					A lot of <i>juubensha</i> rooms nestle in old buildings near Koreatown. When you step out of the cranky elevator, it’s a whole new world. 
+				</p>
+
+				
+				<p class="subtitle is-6">
+					[room noise]
+				</p>
+
+				<p class="subtitle is-6">
+					This is Sense Seven Lab. Tonight, Chloe Li and her friends are acting out a play stemmed from Chinese mythology. 
+				</p>
+
+
+				<p class="subtitle is-6">
+					<b>Chloe: it's almost like we are watching a broadway show, but you're one of the actor or actress.</b>
+				</p>
+
+
+				<p class="subtitle is-6">
+					They are handed a packet of information about their characters. 
+				</p>
+
+				<p class="subtitle is-6">
+					Chloe is playing an old man who opened up a tavern for lovers to come together. He’s kind of like the Chinese cupid. 
+					She starts by introducing her character to the other players and the whole night is performed in Mandarin.
+				</p>
+
+				<p class="subtitle is-6">
+					<b>Chloe: I'm Yue Lao...(in Mandarin)</b>
+				</p>
+
+				<p class="subtitle is-6">
+					And then, a paid actor starts the drama. Perhaps there is a murder, or a poignant love story. What happens next is up to their acting and interactions.
+				</p>
+
+
+				<p class="subtitle is-6">
+					Chloe’s favorite script is set in an unspecified time in ancient China and her favorite role is this girl who eventually becomes an empress of her land.
+				</p>
+
+
+
+				<p class="subtitle is-6">
+					<b>Chloe: She was abandoned by her father and she went through a lot of child abuse. 
+						A lot of people was bullying her and her boyfriend left her, cheated on her, and her sister, or like, her friends betrayed her. A lot of things like that but she didn't just give up.</b>
+				</p>
+
+				<p class="subtitle is-6">
+					<b>I feel like we went through something similar. We share a lot of things in common, but I hope in the future, one day, I can become like as successful as her.</b>
+				</p>
+
+				<p class="subtitle is-6">
+					There are many types of <i>juubensha</i> scripts: some are crime-based, some are emotional ones that bring players into their characters’ journeys and they’d feel like they've had a whole life.
+				</p>
+
+				<p class="subtitle is-6">
+					<b>Chloe: I felt like I don't have to be by myself, so I can resonate with some other people and then we feel the same thing, so I can just like feel detached with the real world for like a couple hours.
+					</b>
+				</p>
+
+				<p class="subtitle is-6">
+					Chloe says these games go on for seven to eight hours at the very least and often up to 12 hours.
+				</p>
+
+
+				<p class="subtitle is-6">
+					The whole night is helped along by professional actors like Dakki Ji, who manages another <i>juubensha</i> shop called Noah’s Ark. 
+					She’s a 22-year-old Theater major at Barnard College.
+				</p>
+
+				<p class="subtitle is-6">
+					<b>Dakki: Their acting sometimes gives information, or sometimes makes the players more, um, I don't know, empathize with the whole story. And yeah, it's more, it's kind of like "Sleep No More", if you know about that. 
+						Because it's like a whole immersive experience for the players. </b>
+				</p>
+
+				<p class="subtitle is-6">
+					Dakki says they source their scripts from <i>juubensha</i> exhibitions in China. And they charge $60-120 per person for the night.
+				</p>
+
+				<p class="subtitle is-6">
+					From the players, to actors, to store managers, everyone in this industry is staying because they love acting and the art of <i>juubensha</i>. 
+
+				</p>
+
+				<p class="subtitle is-6">
+					The manager of Sense Seven Lab is Christina Zhen. She was trained in Public Health, but likes this job better.
+				</p>
+
+				<p class="subtitle is-6">
+					Christina Zhen says she takes a percentage from the store’s revenue and her earnings vary from $3,000-6,000 a month.
+				</p>
+
+				<p class="subtitle is-6">
+					<b>
+						Christina: We love acting. We love staying with different people and then bring up different performance to them and why we are doing it so long, 
+						even though we're not gaining like a lot, a lot of profit, but we're still doing that because of the place, and then the people who are staying with us.
+
+					</b>
+				</p>
+
+				<p class="subtitle is-6">
+					
+					As for Chloe’s game where she was the old man in Chinese mythology, the game went until 5 a.m. in the morning. The old man actually opened the tavern to reunite with his own lover. 
+					When he eventually met her again after hundreds of years, she asked him: have I seen you before? And he said: I’ve been waiting for you. 
+
+				</p>
+
+				<p class="subtitle is-6">
+					From Columbia Radio News, I’m Tiffany Wang.
+				</p>
+
+			
+
+			</div>
+		</div>
+	</div>
+
+
+	
+			
+</body>
+
+</html>
