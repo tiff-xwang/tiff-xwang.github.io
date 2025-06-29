@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Luckin Coffee U.S. Expansion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- Preconnect to speed up Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Fallback in case JavaScript is disabled -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Jacquard+24&family=Raleway:wght@400&display=swap">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .content figure {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        a {
+            color: #748C5B;
+        }
+
+        /* Apply EB Garamond only to main headings */
+        h1,
+        h2,
+        h3 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 700;
+        }
+
+
+        html,
+        body {
+            background-color: #F8F6F2;
+            /* Soft white */
+            color: #3C3C3C;
+            /* Dark gray */
+            padding-top: 1.2em;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        p.chart-title {
+            color: #3C3C3C;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            padding-bottom: 0;
+        }
+
+        p.chart-subtitle {
+            color: #3C3C3C;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0;
+        }
+
+
+        .highlight-box {
+            background: #F5F1E6;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+        }
+
+        iframe,
+        img {
+            padding-top: 1.2em;
+            padding-bottom: 1.2em;
+            max-width: 100%;
+        }
+
+
+        /* margin on mobile */
+        /* Remove margins and padding for small screens */
+        @media (max-width: 640px) {
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+                /* Prevents horizontal scrolling */
+            }
+
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-top: -1rem;
+            }
+
+            .column {
+                padding: 0 !important;
+            }
+        }
+
+
+        .chart-title,
+        .chart-subtitle {
+            text-align: left;
+            width: 100%;
+            word-wrap: break-word;
+        }
+
+        /* Adjust column responsive behavior */
+        @media (max-width: 768px) {
+            .columns {
+                display: block;
+            }
+
+            .column {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+
+            .is-narrow {
+                width: 100% !important;
+            }
+
+            .chart-title,
+            .chart-subtitle {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+
+        /* Add to your existing CSS */
+        #g-template-box {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .column.is-two-thirds #g-template-full {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            .columns {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column.is-two-thirds,
+            .column.is-one-third {
+                width: 100% !important;
+            }
+
+            #g-template-box {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Heatmap container style */
+        .heatmap-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heatmap-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0;
+        }
+    </style>
+    <link href="scrolly-styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <h1 class="title is-1">New Yorkers Flock to Chinese Coffee Chain Luckin Coffee
+                </h1>
+                <h2 class="byline title is-5">By
+                    <a href="https://tiff-xwang.github.io/">Tiffany Xinran Wang</a>
+                </h2>
+                <div class="is-flex is-align-items-center mb-5">
+                    <h2 class="date title is-6 mb-0 mr-4">June 27, 2025</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="IMG_8593.JPG">
+        </div>
+        <div class="steps-container">
+
+            <div class="step" id="step1">
+
+
+                <p class="subtitle is-6">
+                    China’s top coffee chain Luckin Coffee toured different New York City hotspots with a series of
+                    coffee truck pop-ups,
+                    warming up for the openings of its first two U.S. stores at the end of the month.
+
+                </p>
+            </div>
+            <div class="step" id="step2">
+
+                <p class="subtitle is-6">
+                    On the second day of the promotion, the line for Luckin’s free coffee stretched two blocks long in
+                    90-degree weather in Soho.
+                    The company’s marketing and business strategy helped announce the brand to loyal Luckin lovers and
+                    onlookers alike.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <p class="subtitle is-6">
+                    “I actually really like it,” summer student intern Paige Yu said after her first sip of Luckin’s
+                    matcha coconut latte.
+                    “I tend to like sweeter drinks, so the coconut is a great addition.”
+                </p>
+
+                <p class="subtitle is-6">
+                    Luckin’s expansion into the U.S. will spark new competition and opportunities in a saturated market
+                    of Asian and domestic beverage makers.
+                </p>
+
+                <p class="subtitle is-6">
+                    Stylish tea brands that are popular in China are popping up all over New York: HEYTEA opened 14
+                    locations in a year; Naisnow and LELECHA have plastered their new storefronts with signage.
+                </p>
+
+                <p class="subtitle is-6">
+                    But there are few Chinese coffee brands like Luckin.
+                </p>
+
+                <p class="subtitle is-6">
+                    Luckin Coffee has over 24,000 stores in Asia as of the end of March, surpassing Starbucks’ 19,000
+                    stores worldwide.
+                </p>
+
+                <p class="subtitle is-6">
+                    It is known for its game plan of seizing the market with massive outreach and dealing with the debt
+                    later.
+                </p>
+
+
+                <p class="subtitle is-6">
+                    Luckin CEO Jinyi Guo acknowledged that they even “opened slightly more stores than initially
+                    planned” in the latest earnings call.
+                </p>
+
+                <p class="subtitle is-6">
+                    The company’s annual report said it grossed $4.7 billion in revenue in 2024, a nearly 40% increase
+                    from the previous year, thanks to rapid store and customer growth.
+                </p>
+
+                <p class="subtitle is-6">
+                    However, “decreasing customer spending, increasing competition, [and] declining growth of China’s
+                    coffee industry” prompted Luckin to seek new sources of revenue outside China, in Singapore,
+                    Malaysia and now the U.S.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="IMG_8607.JPG">
+        </div>
+        <div class="steps-container">
+
+            <div class="step" id="step1">
+                <p class="subtitle is-6">
+                    During its four days of pre-opening truck pop-ups, customers could receive a free cup of 16 oz
+                    coffee by signing up for the store app, a $0.99 coupon for any drink and a tote bag for tagging the
+                    store on social media.
+
+                </p>
+
+            </div>
+
+            <div class="step" id="step2">
+                <p class="subtitle is-6">
+                    There were also hidden phrases of encouragement in the cup sleeves, such as “You’re doing great,
+                    even if it feels not” and “Chase your dreams, and luck comes along,” that became sought-after
+                    souvenirs.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+                <p class="subtitle is-6">
+                    University of Wisconsin–Madison student Hongbo Zhao has been a fervent Luckin customer. He said he
+                    found himself craving Luckin’s coffee three times a month when it was only available in Asia.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="IMG_8603.JPG">
+        </div>
+        <div class="steps-container">
+            <div class="step" id="step1">
+
+                <p class="subtitle is-6">
+                    “They have some particular coffee that only Luckin has. For example, orange cold brew, pineapple
+                    cold brew, coconut cold brew kind-of stuff,” Zhao said. “Compared with that, American coffee is kind
+                    of boring.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <p class="subtitle is-6">
+                    News of the event spread on social media platforms like RedNote and Instagram, tailoring to young
+                    people in New York who are attuned to such promotion culture, many of whom showed up at the
+                    hour-long lines.
+                </p>
+
+                <p class="subtitle is-6">
+                    Yu came across the pop-up on TikTok. “I’ve heard of a lot of good things about it, so I was
+                    interested to try it out,” she said.
+                </p>
+
+                <p class="subtitle is-6">
+                    “I’m Chinese and I’ve been to China a few times before and I saw this place all over the place in
+                    China,” Yu said, “so I thought it was really interesting that they were opening up a shop here.”
+                </p>
+
+                <p class="subtitle is-6">
+                    Instagram food blogger Emma Newhouse said the drinks looked really good. “And that was just like, ‘I
+                    need it’.”
+                </p>
+
+                <p class="subtitle is-6">
+                    “It sounds like their target audience is going to be sort of late teens, early 20 somethings”, New
+                    York University professor emeritus of marketing Russell Winer said.
+                </p>
+
+                <p class="subtitle is-6">
+                    Winer said their social media strategy “might be effective against Starbucks, which has a broader
+                    target audience and somewhat older.”
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="IMG_8602.JPG">
+        </div>
+        <div class="steps-container">
+
+            <div class="step" id="step1">
+
+
+                <p class="subtitle is-6">
+                    The crowd was free advertising for Luckin Coffee in itself, attracting curious looks and gasps from
+                    passersby on the buzzing street:
+                </p>
+
+
+            </div>
+            <div class="step" id="step2">
+
+                <p class="subtitle is-6">
+                    “What is this coffee?”
+                </p>
+
+                <p class="subtitle is-6">
+                    “This is so New York!”
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <p class="subtitle is-6">
+                    As Chinese consumers’ spending power dropped, Chinese companies like Luckin and Miniso were born out
+                    of a need for cheap but cute products. After Miniso successfully opened four locations in Manhattan,
+                    Luckin is coming to operate with the same business model.
+                </p>
+
+                <p class="subtitle is-6">
+                    “If the price can be economical, we will get Luckin Coffee in my daily routine”, Zhao said.
+                </p>
+
+                <p class="subtitle is-6">
+                    A promotion page on Luckin’s app mentions their drinks will be priced under $6.75, which customers
+                    at the pop-ups didn’t think was a bargain.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="IMG_8610.JPG">
+        </div>
+        <div class="steps-container">
+
+            <div class="step" id="step1">
+
+                <p class="subtitle is-6">
+                    On top of that, Winer said Luckin’s two stores in Manhattan aren’t that many and “they’re gonna have
+                    to drive [consumers] to those two locations.”
+                </p>
+            </div>
+
+            <div class="step" id="step2">
+
+                <p class="subtitle is-6">
+                    And those locations are surrounded by Starbucks, budget chains like Dunkin’ and McDonald’s, and
+                    independent cafés.
+                </p>
+
+            </div>
+    </section>
+
+
+    <div class="container">
+        <div class="columns is-mobile is-multiline is-centered">
+            <div class="column is-two-thirds">
+
+                <p class="subtitle is-6">
+                    Just around the corner from Luckin’s new home between West 27th and 28th Street on 6th Avenue sits a
+                    boutique café, Patent Coffee. The barista there was unfazed by the incoming rivalry.
+                </p>
+
+                <p class="subtitle is-6">
+                    “It’s a healthy competition because this is the best coffee shop in this neighborhood,” Lorenzo
+                    Rodriguez said with his arms open. “Ten toes on it!”
+                </p>
+
+                <p class="subtitle is-6">
+                    But Winer said he sees potential for Luckin in New York City, which is filled with young people with
+                    disposable income.
+                </p>
+
+                <p class="subtitle is-6">
+                    “ If they offer a good product, and they do an effective marketing job and make it seem young and
+                    hip and something cool, then there’s no reason they can't be successful.”
+                </p>
+
+                <p class="subtitle is-6">
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
